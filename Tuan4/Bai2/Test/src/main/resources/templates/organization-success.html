@@ -1,0 +1,139 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo Tổ Chức Thành Công</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .success-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #4caf50;
+        margin-bottom: 20px;
+      }
+      .success-message {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border-left: 4px solid #4caf50;
+        font-weight: bold;
+      }
+      .organization-details {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+      .detail-row {
+        margin-bottom: 10px;
+      }
+      .detail-label {
+        font-weight: bold;
+        color: #555;
+        display: inline-block;
+        width: 150px;
+      }
+      .detail-value {
+        color: #333;
+      }
+      .button-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+      }
+      button,
+      a.button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+      .btn-director {
+        background-color: #2196f3;
+        color: white;
+      }
+      .btn-director:hover {
+        background-color: #1976d2;
+      }
+      .btn-back {
+        background-color: #757575;
+        color: white;
+      }
+      .btn-back:hover {
+        background-color: #616161;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success-container">
+      <h1>✓ Thành Công</h1>
+
+      <!-- Success Message -->
+      <div class="success-message" th:text="${successMessage}">
+        Lưu thành công
+      </div>
+
+      <!-- Organization Details -->
+      <div class="organization-details">
+        <h2>Thông Tin Tổ Chức</h2>
+        <div class="detail-row">
+          <span class="detail-label">Mã Tổ Chức:</span>
+          <span class="detail-value" th:text="${organization.orgId}"></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Tên Tổ Chức:</span>
+          <span class="detail-value" th:text="${organization.orgName}"></span>
+        </div>
+        <div class="detail-row" th:if="${organization.address}">
+          <span class="detail-label">Địa Chỉ:</span>
+          <span class="detail-value" th:text="${organization.address}"></span>
+        </div>
+        <div class="detail-row" th:if="${organization.phone}">
+          <span class="detail-label">Số Điện Thoại:</span>
+          <span class="detail-value" th:text="${organization.phone}"></span>
+        </div>
+        <div class="detail-row" th:if="${organization.email}">
+          <span class="detail-label">Email:</span>
+          <span class="detail-value" th:text="${organization.email}"></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Ngày Tạo:</span>
+          <span
+            class="detail-value"
+            th:text="${#temporals.format(organization.createdDate, 'dd/MM/yyyy HH:mm:ss')}"
+          ></span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <a
+          th:if="${showDirector}"
+          th:href="@{/organizations/{id}/directors(id=${organization.orgId})}"
+          class="button btn-director"
+        >
+          Quản Lý Giám Đốc
+        </a>
+        <a href="/organizations/new" class="button btn-back">Quay Lại</a>
+      </div>
+    </div>
+  </body>
+</html>

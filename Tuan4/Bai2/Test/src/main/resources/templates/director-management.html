@@ -1,0 +1,81 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Giám Đốc</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .director-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .info-box {
+        background-color: #e3f2fd;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border-left: 4px solid #2196f3;
+      }
+      .placeholder {
+        text-align: center;
+        padding: 40px;
+        color: #757575;
+      }
+      .placeholder h2 {
+        color: #2196f3;
+      }
+      button,
+      a.button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        background-color: #757575;
+        color: white;
+        margin-top: 20px;
+      }
+      button:hover,
+      a.button:hover {
+        background-color: #616161;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="director-container">
+      <h1>Quản Lý Giám Đốc</h1>
+
+      <div class="info-box">
+        <strong>Mã Tổ Chức:</strong> <span th:text="${orgId}"></span>
+      </div>
+
+      <div class="placeholder">
+        <h2>🎯 Chức Năng Quản Lý Giám Đốc</h2>
+        <p>Đây là trang giữ chỗ cho chức năng Quản lý Giám đốc.</p>
+        <p>
+          Bạn có thể thêm, sửa và quản lý giám đốc cho Tổ Chức có Mã:
+          <strong th:text="${orgId}"></strong>
+        </p>
+      </div>
+
+      <a href="/organizations/new" class="button">Quay Lại Tổ Chức</a>
+    </div>
+  </body>
+</html>
