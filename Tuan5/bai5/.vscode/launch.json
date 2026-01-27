@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Bai5Application<bai5>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.bai5.Bai5Application",
+      "projectName": "bai5",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
