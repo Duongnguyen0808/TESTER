@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký Tài Khoản – ShopVN.vn</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .container {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 580px;
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 28px 32px;
+        text-align: center;
+      }
+      .header h1 {
+        font-size: 22px;
+        margin-bottom: 4px;
+      }
+      .header p {
+        font-size: 13px;
+        opacity: 0.85;
+      }
+      .form-body {
+        padding: 28px 32px;
+      }
+      .form-group {
+        margin-bottom: 18px;
+        position: relative;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #333;
+        font-size: 14px;
+      }
+      .form-group label .required {
+        color: #e74c3c;
+        margin-left: 2px;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group input[type="password"],
+      .form-group input[type="tel"] {
+        width: 100%;
+        padding: 10px 14px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s;
+        outline: none;
+      }
+      .form-group input:focus {
+        border-color: #2a5298;
+        box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.15);
+      }
+      .form-group input.error-input {
+        border-color: #e74c3c;
+        box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+      }
+      .form-group input.success-input {
+        border-color: #27ae60;
+        box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+      }
+      .error-msg {
+        color: #e74c3c;
+        font-size: 12px;
+        margin-top: 4px;
+        display: none;
+        align-items: center;
+        gap: 4px;
+      }
+      .error-msg.show {
+        display: flex;
+      }
+      .error-msg::before {
+        content: "⚠";
+      }
+      .radio-group {
+        display: flex;
+        gap: 20px;
+        margin-top: 6px;
+      }
+      .radio-group label {
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .radio-group input[type="radio"] {
+        accent-color: #2a5298;
+        width: 16px;
+        height: 16px;
+      }
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      .checkbox-group input[type="checkbox"] {
+        accent-color: #2a5298;
+        width: 18px;
+        height: 18px;
+      }
+      .checkbox-group label {
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .checkbox-group a {
+        color: #2a5298;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn-group {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+      }
+      .btn-register {
+        flex: 1;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .btn-register:hover:not(:disabled) {
+        background: linear-gradient(135deg, #2a5298, #3a6bc5);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(42, 82, 152, 0.4);
+      }
+      .btn-register:disabled {
+        background: #aaa;
+        cursor: not-allowed;
+      }
+      .btn-login {
+        padding: 12px 24px;
+        background: transparent;
+        color: #2a5298;
+        border: 2px solid #2a5298;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .btn-login:hover {
+        background: #2a5298;
+        color: white;
+      }
+      .password-wrapper {
+        position: relative;
+      }
+      .password-wrapper input {
+        padding-right: 42px;
+      }
+      .toggle-pw {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 18px;
+        color: #999;
+        user-select: none;
+      }
+      /* Modal */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .modal-overlay.show {
+        display: flex;
+      }
+      .modal {
+        background: white;
+        border-radius: 12px;
+        padding: 32px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+      .modal h2 {
+        margin-bottom: 16px;
+        color: #1e3c72;
+      }
+      .modal p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #555;
+        margin-bottom: 12px;
+      }
+      .modal .close-btn {
+        display: block;
+        margin: 16px auto 0;
+        padding: 10px 32px;
+        background: #2a5298;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      /* Success modal */
+      .success-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+      }
+      .success-overlay.show {
+        display: flex;
+      }
+      .success-modal {
+        background: white;
+        border-radius: 12px;
+        padding: 40px;
+        text-align: center;
+        max-width: 420px;
+        width: 90%;
+      }
+      .success-modal .check-icon {
+        font-size: 60px;
+        color: #27ae60;
+        margin-bottom: 16px;
+      }
+      .success-modal h2 {
+        color: #27ae60;
+        margin-bottom: 8px;
+      }
+      .success-modal p {
+        color: #666;
+        font-size: 14px;
+      }
+      .hint {
+        color: #888;
+        font-size: 12px;
+        margin-top: 3px;
+      }
+      .row-2 {
+        display: flex;
+        gap: 16px;
+      }
+      .row-2 .form-group {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🛒 ShopVN.vn</h1>
+        <p>Đăng ký tài khoản mới</p>
+      </div>
+
+      <div class="form-body">
+        <form id="registerForm" novalidate>
+          <!-- Họ và tên -->
+          <div class="form-group">
+            <label>Họ và tên <span class="required">(*)</span></label>
+            <input
+              type="text"
+              id="hoTen"
+              placeholder="VD: Nguyễn Văn An"
+              maxlength="55"
+            />
+            <div class="hint">Chỉ chữ cái và dấu cách. Từ 2–50 ký tự.</div>
+            <div class="error-msg" id="hoTenError"></div>
+          </div>
+
+          <!-- Tên đăng nhập -->
+          <div class="form-group">
+            <label>Tên đăng nhập <span class="required">(*)</span></label>
+            <input
+              type="text"
+              id="tenDangNhap"
+              placeholder="VD: nguyen_van_an"
+              maxlength="25"
+            />
+            <div class="hint">
+              Chữ thường, số, gạch dưới. Bắt đầu bằng chữ. 5–20 ký tự.
+            </div>
+            <div class="error-msg" id="tenDangNhapError"></div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label>Email <span class="required">(*)</span></label>
+            <input
+              type="email"
+              id="email"
+              placeholder="VD: example@gmail.com"
+            />
+            <div class="error-msg" id="emailError"></div>
+          </div>
+
+          <!-- Số điện thoại -->
+          <div class="form-group">
+            <label>Số điện thoại <span class="required">(*)</span></label>
+            <input
+              type="tel"
+              id="soDienThoai"
+              placeholder="VD: 0987654321"
+              maxlength="11"
+            />
+            <div class="hint">Bắt đầu bằng 0, gồm 10 chữ số.</div>
+            <div class="error-msg" id="soDienThoaiError"></div>
+          </div>
+
+          <!-- Mật khẩu -->
+          <div class="form-group">
+            <label>Mật khẩu <span class="required">(*)</span></label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="matKhau"
+                placeholder="8–32 ký tự"
+                maxlength="35"
+              />
+              <span class="toggle-pw" onclick="togglePassword('matKhau', this)"
+                >👁</span
+              >
+            </div>
+            <div class="hint">
+              Ít nhất 1 chữ hoa, 1 chữ thường, 1 số, 1 ký tự đặc biệt.
+            </div>
+            <div class="error-msg" id="matKhauError"></div>
+          </div>
+
+          <!-- Xác nhận mật khẩu -->
+          <div class="form-group">
+            <label>Xác nhận mật khẩu <span class="required">(*)</span></label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="xacNhanMatKhau"
+                placeholder="Nhập lại mật khẩu"
+              />
+              <span
+                class="toggle-pw"
+                onclick="togglePassword('xacNhanMatKhau', this)"
+                >👁</span
+              >
+            </div>
+            <div class="error-msg" id="xacNhanMatKhauError"></div>
+          </div>
+
+          <div class="row-2">
+            <!-- Ngày sinh -->
+            <div class="form-group">
+              <label>Ngày sinh</label>
+              <input
+                type="text"
+                id="ngaySinh"
+                placeholder="dd/mm/yyyy"
+                maxlength="10"
+              />
+              <div class="hint">Từ 16 đến dưới 100 tuổi.</div>
+              <div class="error-msg" id="ngaySinhError"></div>
+            </div>
+
+            <!-- Giới tính -->
+            <div class="form-group">
+              <label>Giới tính</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="gioiTinh" value="Nam" /> Nam</label
+                >
+                <label
+                  ><input type="radio" name="gioiTinh" value="Nữ" /> Nữ</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="gioiTinh"
+                    value="Không muốn tiết lộ"
+                  />
+                  Khác</label
+                >
+              </div>
+              <div class="error-msg" id="gioiTinhError"></div>
+            </div>
+          </div>
+
+          <!-- Mã giới thiệu -->
+          <div class="form-group">
+            <label>Mã giới thiệu</label>
+            <input
+              type="text"
+              id="maGioiThieu"
+              placeholder="VD: ABCD1234"
+              maxlength="10"
+              style="text-transform: uppercase"
+            />
+            <div class="hint">8 ký tự chữ hoa và số. Không bắt buộc.</div>
+            <div class="error-msg" id="maGioiThieuError"></div>
+          </div>
+
+          <!-- Đồng ý điều khoản -->
+          <div class="form-group">
+            <div class="checkbox-group">
+              <input type="checkbox" id="dongYDieuKhoan" />
+              <label for="dongYDieuKhoan">Tôi đồng ý với</label>
+              <a id="xemDieuKhoan" onclick="openTermsModal()">Xem Điều khoản</a>
+              <span class="required">(*)</span>
+            </div>
+            <div class="error-msg" id="dongYDieuKhoanError"></div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="submit" class="btn-register" id="btnDangKy">
+              Đăng ký
+            </button>
+            <button
+              type="button"
+              class="btn-login"
+              onclick="alert('Chuyển sang trang đăng nhập!')"
+            >
+              Đăng nhập
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Điều khoản -->
+    <div class="modal-overlay" id="termsModal">
+      <div class="modal">
+        <h2>📋 Điều Khoản Sử Dụng – ShopVN.vn</h2>
+        <p>
+          <strong>1. Điều khoản chung:</strong> Bằng việc đăng ký tài khoản, bạn
+          đồng ý tuân thủ các quy định của ShopVN.vn.
+        </p>
+        <p>
+          <strong>2. Tài khoản:</strong> Mỗi người chỉ được đăng ký một tài
+          khoản. Bạn chịu trách nhiệm bảo mật thông tin tài khoản.
+        </p>
+        <p>
+          <strong>3. Quyền riêng tư:</strong> Chúng tôi cam kết bảo vệ thông tin
+          cá nhân của bạn theo quy định pháp luật Việt Nam.
+        </p>
+        <p>
+          <strong>4. Sử dụng dịch vụ:</strong> Không sử dụng dịch vụ cho mục
+          đích bất hợp pháp hoặc gây hại cho người khác.
+        </p>
+        <p>
+          <strong>5. Thay đổi điều khoản:</strong> ShopVN.vn có quyền thay đổi
+          điều khoản và sẽ thông báo trước 30 ngày.
+        </p>
+        <button class="close-btn" onclick="closeTermsModal()">Đã hiểu</button>
+      </div>
+    </div>
+
+    <!-- Modal Đăng ký thành công -->
+    <div class="success-overlay" id="successModal">
+      <div class="success-modal">
+        <div class="check-icon">✅</div>
+        <h2>Đăng ký thành công!</h2>
+        <p>
+          Chào mừng bạn đến với ShopVN.vn. Vui lòng kiểm tra email để xác thực
+          tài khoản.
+        </p>
+        <button
+          class="close-btn"
+          onclick="closeSuccessModal()"
+          style="margin-top: 20px"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Giả lập danh sách email đã tồn tại
+      const existingEmails = [
+        "user@shopvn.vn",
+        "admin@shopvn.vn",
+        "test@gmail.com",
+        "existing@email.com",
+      ];
+      // Giả lập danh sách tên đăng nhập đã tồn tại
+      const existingUsernames = [
+        "admin",
+        "nguyen_van_a",
+        "testuser",
+        "existing_user",
+      ];
+      // Giả lập mã giới thiệu hợp lệ trong CSDL
+      const validReferralCodes = [
+        "ABCD1234",
+        "SHOP2024",
+        "REF12345",
+        "VN123456",
+      ];
+
+      // ===== TOGGLE PASSWORD =====
+      function togglePassword(inputId, icon) {
+        const input = document.getElementById(inputId);
+        if (input.type === "password") {
+          input.type = "text";
+          icon.textContent = "🙈";
+        } else {
+          input.type = "password";
+          icon.textContent = "👁";
+        }
+      }
+
+      // ===== SHOW / CLEAR ERROR =====
+      function showError(fieldId, message) {
+        const errorEl = document.getElementById(fieldId + "Error");
+        const inputEl = document.getElementById(fieldId);
+        if (errorEl) {
+          errorEl.textContent = "⚠ " + message;
+          errorEl.classList.add("show");
+        }
+        if (inputEl) {
+          inputEl.classList.add("error-input");
+          inputEl.classList.remove("success-input");
+        }
+      }
+      function clearError(fieldId) {
+        const errorEl = document.getElementById(fieldId + "Error");
+        const inputEl = document.getElementById(fieldId);
+        if (errorEl) {
+          errorEl.textContent = "";
+          errorEl.classList.remove("show");
+        }
+        if (inputEl) {
+          inputEl.classList.remove("error-input");
+          inputEl.classList.add("success-input");
+        }
+      }
+      function clearAllErrors() {
+        document.querySelectorAll(".error-msg").forEach((el) => {
+          el.textContent = "";
+          el.classList.remove("show");
+        });
+        document.querySelectorAll("input").forEach((el) => {
+          el.classList.remove("error-input", "success-input");
+        });
+      }
+
+      // ===== VALIDATORS =====
+      function validateHoTen() {
+        const val = document.getElementById("hoTen").value.trim();
+        if (!val) {
+          showError("hoTen", "Họ và tên không được để trống");
+          return false;
+        }
+        if (val.length < 2) {
+          showError("hoTen", "Họ và tên phải có ít nhất 2 ký tự");
+          return false;
+        }
+        if (val.length > 50) {
+          showError("hoTen", "Họ và tên không được vượt quá 50 ký tự");
+          return false;
+        }
+        // Chỉ chữ cái Unicode và dấu cách
+        if (!/^[\p{L} ]+$/u.test(val)) {
+          showError("hoTen", "Họ và tên chỉ được chứa chữ cái và dấu cách");
+          return false;
+        }
+        clearError("hoTen");
+        return true;
+      }
+
+      function validateTenDangNhap() {
+        const val = document.getElementById("tenDangNhap").value.trim();
+        if (!val) {
+          showError("tenDangNhap", "Tên đăng nhập không được để trống");
+          return false;
+        }
+        if (val.length < 5) {
+          showError("tenDangNhap", "Tên đăng nhập phải có ít nhất 5 ký tự");
+          return false;
+        }
+        if (val.length > 20) {
+          showError(
+            "tenDangNhap",
+            "Tên đăng nhập không được vượt quá 20 ký tự",
+          );
+          return false;
+        }
+        if (!/^[a-z][a-z0-9_]*$/.test(val)) {
+          showError(
+            "tenDangNhap",
+            "Chỉ chữ thường, số, gạch dưới. Bắt đầu bằng chữ cái",
+          );
+          return false;
+        }
+        if (existingUsernames.includes(val)) {
+          showError("tenDangNhap", "Tên đăng nhập đã tồn tại trong hệ thống");
+          return false;
+        }
+        clearError("tenDangNhap");
+        return true;
+      }
+
+      function validateEmail() {
+        const val = document.getElementById("email").value.trim();
+        if (!val) {
+          showError("email", "Email không được để trống");
+          return false;
+        }
+        if (!/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(val)) {
+          showError("email", "Email không đúng định dạng");
+          return false;
+        }
+        if (existingEmails.includes(val.toLowerCase())) {
+          showError("email", "Email đã được đăng ký trong hệ thống");
+          return false;
+        }
+        clearError("email");
+        return true;
+      }
+
+      function validateSoDienThoai() {
+        const val = document.getElementById("soDienThoai").value.trim();
+        if (!val) {
+          showError("soDienThoai", "Số điện thoại không được để trống");
+          return false;
+        }
+        if (!/^0\d{9}$/.test(val)) {
+          showError(
+            "soDienThoai",
+            "SĐT phải bắt đầu bằng 0 và gồm đúng 10 chữ số",
+          );
+          return false;
+        }
+        clearError("soDienThoai");
+        return true;
+      }
+
+      function validateMatKhau() {
+        const val = document.getElementById("matKhau").value;
+        if (!val) {
+          showError("matKhau", "Mật khẩu không được để trống");
+          return false;
+        }
+        if (val.length < 8) {
+          showError("matKhau", "Mật khẩu phải có ít nhất 8 ký tự");
+          return false;
+        }
+        if (val.length > 32) {
+          showError("matKhau", "Mật khẩu không được vượt quá 32 ký tự");
+          return false;
+        }
+        if (!/[A-Z]/.test(val)) {
+          showError("matKhau", "Mật khẩu phải chứa ít nhất 1 chữ hoa");
+          return false;
+        }
+        if (!/[a-z]/.test(val)) {
+          showError("matKhau", "Mật khẩu phải chứa ít nhất 1 chữ thường");
+          return false;
+        }
+        if (!/\d/.test(val)) {
+          showError("matKhau", "Mật khẩu phải chứa ít nhất 1 chữ số");
+          return false;
+        }
+        if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val)) {
+          showError("matKhau", "Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt");
+          return false;
+        }
+        clearError("matKhau");
+        return true;
+      }
+
+      function validateXacNhanMatKhau() {
+        const pw = document.getElementById("matKhau").value;
+        const val = document.getElementById("xacNhanMatKhau").value;
+        if (!val) {
+          showError("xacNhanMatKhau", "Xác nhận mật khẩu không được để trống");
+          return false;
+        }
+        if (pw !== val) {
+          showError(
+            "xacNhanMatKhau",
+            "Xác nhận mật khẩu không khớp với mật khẩu",
+          );
+          return false;
+        }
+        clearError("xacNhanMatKhau");
+        return true;
+      }
+
+      function validateNgaySinh() {
+        const val = document.getElementById("ngaySinh").value.trim();
+        if (!val) {
+          clearError("ngaySinh");
+          return true;
+        } // Không bắt buộc
+        if (!/^\d{2}\/\d{2}\/\d{4}$/.test(val)) {
+          showError("ngaySinh", "Ngày sinh phải có định dạng dd/mm/yyyy");
+          return false;
+        }
+        const parts = val.split("/");
+        const day = parseInt(parts[0], 10),
+          month = parseInt(parts[1], 10) - 1,
+          year = parseInt(parts[2], 10);
+        const date = new Date(year, month, day);
+        if (
+          date.getFullYear() !== year ||
+          date.getMonth() !== month ||
+          date.getDate() !== day
+        ) {
+          showError("ngaySinh", "Ngày sinh không hợp lệ");
+          return false;
+        }
+        const today = new Date();
+        let age = today.getFullYear() - date.getFullYear();
+        const m = today.getMonth() - date.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < date.getDate())) age--;
+        if (age < 16) {
+          showError("ngaySinh", "Bạn phải đủ 16 tuổi để đăng ký");
+          return false;
+        }
+        if (age >= 100) {
+          showError("ngaySinh", "Ngày sinh không hợp lệ (trên 100 tuổi)");
+          return false;
+        }
+        clearError("ngaySinh");
+        return true;
+      }
+
+      function validateMaGioiThieu() {
+        const val = document
+          .getElementById("maGioiThieu")
+          .value.trim()
+          .toUpperCase();
+        if (!val) {
+          clearError("maGioiThieu");
+          return true;
+        } // Không bắt buộc
+        if (!/^[A-Z0-9]{8}$/.test(val)) {
+          showError(
+            "maGioiThieu",
+            "Mã giới thiệu phải gồm 8 ký tự chữ hoa và số",
+          );
+          return false;
+        }
+        if (!validReferralCodes.includes(val)) {
+          showError(
+            "maGioiThieu",
+            "Mã giới thiệu không tồn tại trong hệ thống",
+          );
+          return false;
+        }
+        clearError("maGioiThieu");
+        return true;
+      }
+
+      function validateDongYDieuKhoan() {
+        const checked = document.getElementById("dongYDieuKhoan").checked;
+        if (!checked) {
+          showError("dongYDieuKhoan", "Bạn phải đồng ý với Điều khoản sử dụng");
+          return false;
+        }
+        clearError("dongYDieuKhoan");
+        return true;
+      }
+
+      // ===== REAL-TIME VALIDATION (on blur) =====
+      document.getElementById("hoTen").addEventListener("blur", validateHoTen);
+      document
+        .getElementById("tenDangNhap")
+        .addEventListener("blur", validateTenDangNhap);
+      document.getElementById("email").addEventListener("blur", validateEmail);
+      document
+        .getElementById("soDienThoai")
+        .addEventListener("blur", validateSoDienThoai);
+      document
+        .getElementById("matKhau")
+        .addEventListener("blur", validateMatKhau);
+      document
+        .getElementById("xacNhanMatKhau")
+        .addEventListener("blur", validateXacNhanMatKhau);
+      document
+        .getElementById("ngaySinh")
+        .addEventListener("blur", validateNgaySinh);
+      document
+        .getElementById("maGioiThieu")
+        .addEventListener("blur", validateMaGioiThieu);
+      document
+        .getElementById("dongYDieuKhoan")
+        .addEventListener("change", validateDongYDieuKhoan);
+
+      // ===== SUBMIT =====
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          clearAllErrors();
+
+          const results = [
+            validateHoTen(),
+            validateTenDangNhap(),
+            validateEmail(),
+            validateSoDienThoai(),
+            validateMatKhau(),
+            validateXacNhanMatKhau(),
+            validateNgaySinh(),
+            validateMaGioiThieu(),
+            validateDongYDieuKhoan(),
+          ];
+
+          if (results.every((r) => r === true)) {
+            document.getElementById("successModal").classList.add("show");
+          } else {
+            // Scroll đến lỗi đầu tiên
+            const firstError = document.querySelector(".error-msg.show");
+            if (firstError)
+              firstError.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+          }
+        });
+
+      // ===== MODALS =====
+      function openTermsModal() {
+        document.getElementById("termsModal").classList.add("show");
+      }
+      function closeTermsModal() {
+        document.getElementById("termsModal").classList.remove("show");
+      }
+      function closeSuccessModal() {
+        document.getElementById("successModal").classList.remove("show");
+        document.getElementById("registerForm").reset();
+        clearAllErrors();
+      }
+      // Đóng modal khi click bên ngoài
+      document
+        .getElementById("termsModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeTermsModal();
+        });
+      document
+        .getElementById("successModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeSuccessModal();
+        });
+    </script>
+  </body>
+</html>
