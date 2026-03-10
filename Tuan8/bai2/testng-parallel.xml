@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Bài 2.2: Parallel Execution với ThreadLocal -->
+<!-- parallel="classes": mỗi class chạy trên 1 thread riêng -->
+<!-- thread-count="2": chạy đồng thời 2 class cùng lúc -->
+<suite name="SauceDemo_Suite" verbose="1" parallel="classes" thread-count="2">
+    <!-- Truyền tham số chung cho toàn bộ suite -->
+    <parameter name="baseUrl" value="https://www.saucedemo.com/"/>
+    <parameter name="browser" value="chrome"/>
+
+    <listeners>
+        <listener class-name="fpoly.VietnameseReportListener"/>
+    </listeners>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="fpoly.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Cart Tests">
+        <packages>
+            <package name="fpoly.cart"/>
+        </packages>
+    </test>
+</suite>

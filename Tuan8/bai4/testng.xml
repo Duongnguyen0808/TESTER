@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Bai4 - Path Coverage va Cyclomatic Complexity">
+
+    <listeners>
+        <listener class-name="com.example.VietnameseReportListener"/>
+    </listeners>
+
+    <test name="Bai 4.2 - PhiShip Basis Path Test">
+        <classes>
+            <class name="com.example.PhiShipBasisPathTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang='vi'>
+<head>
+<meta charset='UTF-8'>
+<title>Báo Cáo Kiểm Thử - Bài 6 White-Box + Selenium</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f4f6f8;color:#333}
+.header{background:linear-gradient(135deg,#1a237e,#3949ab);color:#fff;padding:32px 40px}
+.header h1{font-size:26px;margin-bottom:6px}
+.header p{opacity:.85;font-size:14px}
+.container{max-width:1250px;margin:24px auto;padding:0 20px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px}
+.card{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.07);border-top:4px solid #ccc}
+.card.total{border-top-color:#1a237e}.card.pass{border-top-color:#2e7d32}
+.card.fail{border-top-color:#c62828}.card.rate{border-top-color:#f57f17}
+.card .number{font-size:36px;font-weight:700;margin:8px 0}
+.card .label{font-size:12px;color:#888;text-transform:uppercase;letter-spacing:1px}
+.card.total .number{color:#1a237e}.card.pass .number{color:#2e7d32}
+.card.fail .number{color:#c62828}.card.rate .number{color:#f57f17}
+.section{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.07);margin-bottom:24px;overflow:hidden}
+.section-title{padding:16px 24px;font-size:16px;font-weight:600;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:10px}
+.section-title .badge-count{background:#e8eaf6;color:#1a237e;padding:3px 12px;border-radius:12px;font-size:13px;font-weight:600}
+table{width:100%;border-collapse:collapse}
+th{background:#f5f5f5;padding:11px 14px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#666;border-bottom:2px solid #e0e0e0}
+td{padding:10px 14px;border-bottom:1px solid #f0f0f0;font-size:13px}
+tr:hover{background:#f9fafb}
+.badge{display:inline-block;padding:3px 14px;border-radius:20px;font-size:12px;font-weight:600}
+.badge.pass{background:#e8f5e9;color:#2e7d32}
+.badge.fail{background:#ffebee;color:#c62828}
+.badge.skip{background:#fff3e0;color:#e65100}
+.method{font-family:'Consolas',monospace;font-size:12px}
+.desc{color:#555;font-size:12px;margin-top:2px}
+.tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;margin-right:4px}
+.tag.tdd{background:#e8eaf6;color:#283593}
+.tag.selenium{background:#e0f7fa;color:#00695c}
+.tag.basis{background:#fce4ec;color:#c62828}
+.tag.boundary{background:#fff8e1;color:#f57f17}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.info-box{background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 10px rgba(0,0,0,.07);border-left:4px solid #3949ab}
+.info-box.selenium{border-left-color:#00897b}
+.info-box h3{font-size:15px;margin-bottom:8px;color:#1a237e}
+.info-box.selenium h3{color:#00695c}
+.info-box p,.info-box li{font-size:13px;line-height:1.7}
+.info-box ul{margin-left:18px}
+.jacoco-box{background:#e8eaf6;border-left:4px solid #283593;padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:24px}
+.jacoco-box p{font-size:13px;line-height:1.7}
+.footer{text-align:center;padding:20px;color:#999;font-size:13px}
+.time{color:#aaa;font-size:13px}
+.error-detail{color:#c62828;font-size:11px;margin-top:4px;font-family:monospace;max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class='header'>
+<h1>&#128202; BÁO CÁO KIỂM THỬ — BÀI 6</h1>
+<p>Tích hợp White-Box Testing với Selenium WebDriver | TDD + JaCoCo Coverage | 10/03/2026 14:42:18</p>
+</div>
+<div class='container'>
+<div class='info-grid'>
+<div class='info-box'>
+<h3>&#128736; Bài 6.1 — TDD: PhoneValidator</h3>
+<ul>
+<li><strong>CFG:</strong> 6 nút quyết định → <strong>CC = 7</strong></li>
+<li><strong>7 Basis Path</strong> + 10 Boundary tests</li>
+<li>Quy trình: RED → GREEN → REFACTOR</li>
+<li>Coverage đo bằng <strong>JaCoCo</strong></li>
+</ul>
+</div>
+<div class='info-box selenium'>
+<h3>&#127760; Bài 6.2 — Selenium: TextBox Form</h3>
+<ul>
+<li><strong>URL:</strong> demoqa.com/text-box</li>
+<li><strong>Page Object Model:</strong> TextBoxPage.java</li>
+<li>CFG: Nhập liệu → Validate email → Output</li>
+<li>4 CFG paths + 6 Boundary tests</li>
+</ul>
+</div>
+</div>
+<div class='jacoco-box'>
+<p>&#128200; <strong>JaCoCo Coverage Report:</strong> Xem chi tiết tại <code>target/site/jacoco/index.html</code> sau khi chạy <code>mvn clean test</code></p>
+</div>
+<div class='cards'>
+<div class='card total'><div class='label'>Tổng test</div><div class='number'>44</div></div>
+<div class='card pass'><div class='label'>Thành công</div><div class='number'>44</div></div>
+<div class='card fail'><div class='label'>Thất bại</div><div class='number'>0</div></div>
+<div class='card rate'><div class='label'>Tỷ lệ đạt</div><div class='number'>100%</div></div>
+</div>
+<div class='section'>
+<div class='section-title'>&#128736; 6.1 TDD - PhoneValidator <span class='badge-count'>34/34 passed</span></div>
+<table>
+<tr><th>#</th><th>Phương thức</th><th>Mô tả</th><th>Loại</th><th>Trạng thái</th><th>Thời gian</th></tr>
+<tr><td>1</td><td><div class='method'>testB1_OnlySpaces()</div></td><td><div class='desc'>B1: chuỗi toàn khoảng trắng → false</div></td><td><span class='tag tdd'>TDD</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>20 ms</td></tr>
+<tr><td>2</td><td><div class='method'>testB2_ValidWithSpaces()</div></td><td><div class='desc'>B2: có khoảng trắng hợp lệ → true</div></td><td><span class='tag tdd'>TDD</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>3</td><td><div class='method'>testB3_Plus84InvalidPrefix()</div></td><td><div class='desc'>B3: +84 nhưng đầu số sai → false</div></td><td><span class='tag tdd'>TDD</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>4</td><td><div class='method'>testB4_TooLong()</div></td><td><div class='desc'>B4: quá dài 11 số → false</div></td><td><span class='tag tdd'>TDD</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>5</td><td><div class='method'>testB5_OnlyPlus84()</div></td><td><div class='desc'>B5: chỉ có +84 → false (quá ngắn)</div></td><td><span class='tag tdd'>TDD</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>6</td><td><div class='method'>testB6_Prefix03()</div></td><td><div class='desc'>B6: đầu số 03x hợp lệ → true</div></td><td><span class='tag tdd'>TDD</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>7</td><td><div class='method'>testB7_Prefix05()</div></td><td><div class='desc'>B7: đầu số 05x hợp lệ → true</div></td><td><span class='tag tdd'>TDD</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>8</td><td><div class='method'>testB8_Prefix07()</div></td><td><div class='desc'>B8: đầu số 07x hợp lệ → true</div></td><td><span class='tag tdd'>TDD</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>9</td><td><div class='method'>testB9_Prefix08()</div></td><td><div class='desc'>B9: đầu số 08x hợp lệ → true</div></td><td><span class='tag tdd'>TDD</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>10</td><td><div class='method'>testP1_NullInput()</div></td><td><div class='desc'>P1: phone=null → false (D1=True)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>11</td><td><div class='method'>testP1b_EmptyInput()</div></td><td><div class='desc'>P1b: phone='' → false (D1=True, empty)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>12</td><td><div class='method'>testP2_InvalidChars()</div></td><td><div class='desc'>P2: ký tự không hợp lệ → false (D2=True)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>13</td><td><div class='method'>testP3_NotStartWith0Or84()</div></td><td><div class='desc'>P3: không bắt đầu 0 hoặc +84 → false (D3=F, D4=False)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>14</td><td><div class='method'>testP4_WrongLength()</div></td><td><div class='desc'>P4: bắt đầu 0 nhưng sai độ dài → false (D5=False)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>15</td><td><div class='method'>testP5_InvalidPrefix()</div></td><td><div class='desc'>P5: 10 số nhưng đầu số 01 không hợp lệ → false (D6=False)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>16</td><td><div class='method'>testP6_ValidStartWith0()</div></td><td><div class='desc'>P6: hợp lệ bắt đầu bằng 0 → true (D6=True)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>17</td><td><div class='method'>testP7_ValidStartWith84()</div></td><td><div class='desc'>P7: hợp lệ bắt đầu bằng +84 → true (D3=True, chuẩn hóa)</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>18</td><td><div class='method'>testPhoneValidator_DataProvider() (0512345678, true, B7: prefix 05)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>19</td><td><div class='method'>testPhoneValidator_DataProvider() (+84, false, B5: only +84)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>20</td><td><div class='method'>testPhoneValidator_DataProvider() (0312345678, true, B6: prefix 03)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>21</td><td><div class='method'>testPhoneValidator_DataProvider() (+84112345678, false, B3: +84 invalid prefix)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>22</td><td><div class='method'>testPhoneValidator_DataProvider() (091 234 5678, true, B2: valid with spaces)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>23</td><td><div class='method'>testPhoneValidator_DataProvider() (0812345678, true, B9: prefix 08)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>24</td><td><div class='method'>testPhoneValidator_DataProvider() (null, false, P1: null)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>25</td><td><div class='method'>testPhoneValidator_DataProvider() (0712345678, true, B8: prefix 07)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>26</td><td><div class='method'>testPhoneValidator_DataProvider() (0112345678, false, P5: invalid prefix 01)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>27</td><td><div class='method'>testPhoneValidator_DataProvider() (+84912345678, true, P7: valid +84)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>28</td><td><div class='method'>testPhoneValidator_DataProvider() (   , false, B1: only spaces)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>29</td><td><div class='method'>testPhoneValidator_DataProvider() (, false, P1b: empty)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>30</td><td><div class='method'>testPhoneValidator_DataProvider() (091234567, false, P4: wrong length)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>31</td><td><div class='method'>testPhoneValidator_DataProvider() (1234567890, false, P3: not start 0/+84)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>32</td><td><div class='method'>testPhoneValidator_DataProvider() (0912345678, true, P6: valid 09x)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>33</td><td><div class='method'>testPhoneValidator_DataProvider() (09abc12345, false, P2: invalid chars)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>34</td><td><div class='method'>testPhoneValidator_DataProvider() (09123456789, false, B4: too long)</div></td><td><div class='desc'>DataProvider: tất cả BasisPath + Boundary</div></td><td><span class='tag tdd'>TDD</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+</table>
+</div>
+<div class='section'>
+<div class='section-title'>&#127760; 6.2 Selenium - TextBox WhiteBox <span class='badge-count'>10/10 passed</span></div>
+<table>
+<tr><th>#</th><th>Phương thức</th><th>Mô tả</th><th>Loại</th><th>Trạng thái</th><th>Thời gian</th></tr>
+<tr><td>1</td><td><div class='method'>testAllEmpty()</div></td><td><div class='desc'>Boundary: Tất cả trường trống → submit → không có output</div></td><td><span class='tag selenium'>Selenium</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>148 ms</td></tr>
+<tr><td>2</td><td><div class='method'>testEmailOnlyAt()</div></td><td><div class='desc'>Boundary: Email chỉ có @ → error</div></td><td><span class='tag selenium'>Selenium</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>528 ms</td></tr>
+<tr><td>3</td><td><div class='method'>testEmailWithSpace()</div></td><td><div class='desc'>Boundary: Email có space → error</div></td><td><span class='tag selenium'>Selenium</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>414 ms</td></tr>
+<tr><td>4</td><td><div class='method'>testEmptyEmail_ValidSubmit()</div></td><td><div class='desc'>CFG Path 3: Email trống (bỏ qua) → output vẫn hiển thị</div></td><td><span class='tag selenium'>Selenium</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>447 ms</td></tr>
+<tr><td>5</td><td><div class='method'>testInvalidEmail_IncompleteDomain()</div></td><td><div class='desc'>CFG Path 2b: Email sai — có @ nhưng thiếu domain → error</div></td><td><span class='tag selenium'>Selenium</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>487 ms</td></tr>
+<tr><td>6</td><td><div class='method'>testInvalidEmail_NoAt()</div></td><td><div class='desc'>CFG Path 2: Email sai định dạng → field-error, không hiển thị output</div></td><td><span class='tag selenium'>Selenium</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>481 ms</td></tr>
+<tr><td>7</td><td><div class='method'>testLongName()</div></td><td><div class='desc'>Boundary: Name rất dài → vẫn hiển thị output</div></td><td><span class='tag selenium'>Selenium</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>796 ms</td></tr>
+<tr><td>8</td><td><div class='method'>testOnlyValidEmail()</div></td><td><div class='desc'>Boundary: Chỉ nhập email hợp lệ → output hiển thị email</div></td><td><span class='tag selenium'>Selenium</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>519 ms</td></tr>
+<tr><td>9</td><td><div class='method'>testSpecialCharsInName()</div></td><td><div class='desc'>Boundary: Ký tự đặc biệt trong Name → output hiển thị</div></td><td><span class='tag selenium'>Selenium</span><span class='tag boundary'>Boundary</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>648 ms</td></tr>
+<tr><td>10</td><td><div class='method'>testValidFullData()</div></td><td><div class='desc'>CFG Path 1: Nhập đầy đủ + email hợp lệ → output hiển thị</div></td><td><span class='tag selenium'>Selenium</span><span class='tag basis'>BasisPath</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>802 ms</td></tr>
+</table>
+</div>
+<div class='footer'>Báo cáo tạo tự động bởi VietnameseReportListener — TestNG 7.8.0 | JaCoCo 0.8.11</div>
+</div>
+</body>
+</html>

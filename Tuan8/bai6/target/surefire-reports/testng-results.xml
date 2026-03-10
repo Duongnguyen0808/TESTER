@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="44" passed="44" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-10T14:40:53 ICT" name="Bai6 - White-Box + Selenium Integration" finished-at="2026-03-10T14:42:18 ICT" duration-ms="85510">
+    <groups>
+    </groups>
+    <test started-at="2026-03-10T14:40:53 ICT" name="6.1 TDD - PhoneValidator" finished-at="2026-03-10T14:40:53 ICT" duration-ms="154">
+      <class name="com.example.PhoneValidatorTest">
+        <test-method signature="testB1_OnlySpaces()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB1_OnlySpaces" description="B1: chuỗi toàn khoảng trắng → false" finished-at="2026-03-10T14:40:53 ICT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB1_OnlySpaces -->
+        <test-method signature="testB2_ValidWithSpaces()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB2_ValidWithSpaces" description="B2: có khoảng trắng hợp lệ → true" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB2_ValidWithSpaces -->
+        <test-method signature="testB3_Plus84InvalidPrefix()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB3_Plus84InvalidPrefix" description="B3: +84 nhưng đầu số sai → false" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB3_Plus84InvalidPrefix -->
+        <test-method signature="testB4_TooLong()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB4_TooLong" description="B4: quá dài 11 số → false" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB4_TooLong -->
+        <test-method signature="testB5_OnlyPlus84()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB5_OnlyPlus84" description="B5: chỉ có +84 → false (quá ngắn)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB5_OnlyPlus84 -->
+        <test-method signature="testB6_Prefix03()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB6_Prefix03" description="B6: đầu số 03x hợp lệ → true" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB6_Prefix03 -->
+        <test-method signature="testB7_Prefix05()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB7_Prefix05" description="B7: đầu số 05x hợp lệ → true" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB7_Prefix05 -->
+        <test-method signature="testB8_Prefix07()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB8_Prefix07" description="B8: đầu số 07x hợp lệ → true" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB8_Prefix07 -->
+        <test-method signature="testB9_Prefix08()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testB9_Prefix08" description="B9: đầu số 08x hợp lệ → true" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB9_Prefix08 -->
+        <test-method signature="testP1b_EmptyInput()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP1b_EmptyInput" description="P1b: phone=&#039;&#039; → false (D1=True, empty)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP1b_EmptyInput -->
+        <test-method signature="testP1_NullInput()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP1_NullInput" description="P1: phone=null → false (D1=True)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP1_NullInput -->
+        <test-method signature="testP2_InvalidChars()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP2_InvalidChars" description="P2: ký tự không hợp lệ → false (D2=True)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP2_InvalidChars -->
+        <test-method signature="testP3_NotStartWith0Or84()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP3_NotStartWith0Or84" description="P3: không bắt đầu 0 hoặc +84 → false (D3=F, D4=False)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP3_NotStartWith0Or84 -->
+        <test-method signature="testP4_WrongLength()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP4_WrongLength" description="P4: bắt đầu 0 nhưng sai độ dài → false (D5=False)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP4_WrongLength -->
+        <test-method signature="testP5_InvalidPrefix()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP5_InvalidPrefix" description="P5: 10 số nhưng đầu số 01 không hợp lệ → false (D6=False)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP5_InvalidPrefix -->
+        <test-method signature="testP6_ValidStartWith0()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP6_ValidStartWith0" description="P6: hợp lệ bắt đầu bằng 0 → true (D6=True)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP6_ValidStartWith0 -->
+        <test-method signature="testP7_ValidStartWith84()[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testP7_ValidStartWith84" description="P7: hợp lệ bắt đầu bằng +84 → true (D3=True, chuẩn hóa)" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP7_ValidStartWith84 -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P1: null]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P1b: empty]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[09abc12345]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P2: invalid chars]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P3: not start 0/+84]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0112345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P5: invalid prefix 01]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[091234567]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P4: wrong length]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0912345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P6: valid 09x]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+84912345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[P7: valid +84]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[   ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B1: only spaces]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+84112345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B3: +84 invalid prefix]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[091 234 5678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B2: valid with spaces]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[09123456789]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B4: too long]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[+84]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B5: only +84]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0312345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B6: prefix 03]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0512345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B7: prefix 05]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0712345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B8: prefix 07]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+        <test-method signature="testPhoneValidator_DataProvider(java.lang.String,boolean,java.lang.String)[pri:0, instance:com.example.PhoneValidatorTest@42f48531]" started-at="2026-03-10T14:40:53 ICT" name="testPhoneValidator_DataProvider" description="DataProvider: tất cả BasisPath + Boundary" data-provider="phoneData" finished-at="2026-03-10T14:40:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0812345678]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B9: prefix 08]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPhoneValidator_DataProvider -->
+      </class> <!-- com.example.PhoneValidatorTest -->
+    </test> <!-- 6.1 TDD - PhoneValidator -->
+    <test started-at="2026-03-10T14:40:53 ICT" name="6.2 Selenium - TextBox WhiteBox" finished-at="2026-03-10T14:42:18 ICT" duration-ms="85293">
+      <class name="com.example.TextBoxWhiteBoxTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:40:53 ICT" name="setUp" finished-at="2026-03-10T14:41:00 ICT" duration-ms="6855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllEmpty()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:00 ICT" name="testAllEmpty" description="Boundary: Tất cả trường trống → submit → không có output" finished-at="2026-03-10T14:41:00 ICT" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllEmpty -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:00 ICT" name="tearDown" finished-at="2026-03-10T14:41:00 ICT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:00 ICT" name="setUp" finished-at="2026-03-10T14:41:09 ICT" duration-ms="8765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEmailOnlyAt()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:09 ICT" name="testEmailOnlyAt" description="Boundary: Email chỉ có @ → error" finished-at="2026-03-10T14:41:09 ICT" duration-ms="528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmailOnlyAt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:09 ICT" name="tearDown" finished-at="2026-03-10T14:41:10 ICT" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:10 ICT" name="setUp" finished-at="2026-03-10T14:41:19 ICT" duration-ms="8976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEmailWithSpace()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:19 ICT" name="testEmailWithSpace" description="Boundary: Email có space → error" finished-at="2026-03-10T14:41:19 ICT" duration-ms="414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmailWithSpace -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:19 ICT" name="tearDown" finished-at="2026-03-10T14:41:19 ICT" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:19 ICT" name="setUp" finished-at="2026-03-10T14:41:28 ICT" duration-ms="9233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEmptyEmail_ValidSubmit()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:28 ICT" name="testEmptyEmail_ValidSubmit" description="CFG Path 3: Email trống (bỏ qua) → output vẫn hiển thị" finished-at="2026-03-10T14:41:29 ICT" duration-ms="447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyEmail_ValidSubmit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:29 ICT" name="tearDown" finished-at="2026-03-10T14:41:29 ICT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:29 ICT" name="setUp" finished-at="2026-03-10T14:41:38 ICT" duration-ms="8940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmail_IncompleteDomain()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:38 ICT" name="testInvalidEmail_IncompleteDomain" description="CFG Path 2b: Email sai — có @ nhưng thiếu domain → error" finished-at="2026-03-10T14:41:38 ICT" duration-ms="487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmail_IncompleteDomain -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:38 ICT" name="tearDown" finished-at="2026-03-10T14:41:39 ICT" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:39 ICT" name="setUp" finished-at="2026-03-10T14:41:47 ICT" duration-ms="8750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmail_NoAt()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:47 ICT" name="testInvalidEmail_NoAt" description="CFG Path 2: Email sai định dạng → field-error, không hiển thị output" finished-at="2026-03-10T14:41:48 ICT" duration-ms="481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmail_NoAt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:48 ICT" name="tearDown" finished-at="2026-03-10T14:41:48 ICT" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:48 ICT" name="setUp" finished-at="2026-03-10T14:41:57 ICT" duration-ms="9018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLongName()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:57 ICT" name="testLongName" description="Boundary: Name rất dài → vẫn hiển thị output" finished-at="2026-03-10T14:41:58 ICT" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLongName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:58 ICT" name="tearDown" finished-at="2026-03-10T14:41:58 ICT" duration-ms="183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:41:58 ICT" name="setUp" finished-at="2026-03-10T14:42:07 ICT" duration-ms="8513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOnlyValidEmail()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:07 ICT" name="testOnlyValidEmail" description="Boundary: Chỉ nhập email hợp lệ → output hiển thị email" finished-at="2026-03-10T14:42:07 ICT" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOnlyValidEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:07 ICT" name="tearDown" finished-at="2026-03-10T14:42:07 ICT" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:07 ICT" name="setUp" finished-at="2026-03-10T14:42:12 ICT" duration-ms="4590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSpecialCharsInName()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:12 ICT" name="testSpecialCharsInName" description="Boundary: Ký tự đặc biệt trong Name → output hiển thị" finished-at="2026-03-10T14:42:13 ICT" duration-ms="648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSpecialCharsInName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:13 ICT" name="tearDown" finished-at="2026-03-10T14:42:13 ICT" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:13 ICT" name="setUp" finished-at="2026-03-10T14:42:17 ICT" duration-ms="4355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidFullData()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:17 ICT" name="testValidFullData" description="CFG Path 1: Nhập đầy đủ + email hợp lệ → output hiển thị" finished-at="2026-03-10T14:42:18 ICT" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidFullData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.TextBoxWhiteBoxTest@34625ccd]" started-at="2026-03-10T14:42:18 ICT" name="tearDown" finished-at="2026-03-10T14:42:18 ICT" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.TextBoxWhiteBoxTest -->
+    </test> <!-- 6.2 Selenium - TextBox WhiteBox -->
+  </suite> <!-- Bai6 - White-Box + Selenium Integration -->
+</testng-results>

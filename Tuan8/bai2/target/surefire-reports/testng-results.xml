@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-10T13:28:59 ICT" name="SauceDemo_Suite" finished-at="2026-03-10T13:29:14 ICT" duration-ms="14903">
+    <groups>
+      <group name="regression">
+        <method signature="LoginTest.testLoginLockedUser()[pri:0, instance:fpoly.LoginTest@40ef3420]" name="testLoginLockedUser" class="fpoly.LoginTest"/>
+        <method signature="LoginTest.testLoginSuccess()[pri:0, instance:fpoly.LoginTest@40ef3420]" name="testLoginSuccess" class="fpoly.LoginTest"/>
+        <method signature="LoginTest.testLoginWrongPassword()[pri:0, instance:fpoly.LoginTest@40ef3420]" name="testLoginWrongPassword" class="fpoly.LoginTest"/>
+        <method signature="CartTest.testAddToCart()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" name="testAddToCart" class="fpoly.cart.CartTest"/>
+        <method signature="CartTest.testRemoveFromCart()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" name="testRemoveFromCart" class="fpoly.cart.CartTest"/>
+        <method signature="CheckoutTest.testCheckoutMissingInfo()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" name="testCheckoutMissingInfo" class="fpoly.CheckoutTest"/>
+        <method signature="CheckoutTest.testGoToCheckout()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" name="testGoToCheckout" class="fpoly.CheckoutTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginTest.testLoginSuccess()[pri:0, instance:fpoly.LoginTest@40ef3420]" name="testLoginSuccess" class="fpoly.LoginTest"/>
+        <method signature="CartTest.testAddToCart()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" name="testAddToCart" class="fpoly.cart.CartTest"/>
+        <method signature="CheckoutTest.testGoToCheckout()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" name="testGoToCheckout" class="fpoly.CheckoutTest"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="LoginTest.testLoginLockedUser()[pri:0, instance:fpoly.LoginTest@40ef3420]" name="testLoginLockedUser" class="fpoly.LoginTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2026-03-10T13:28:59 ICT" name="Login Tests" finished-at="2026-03-10T13:29:06 ICT" duration-ms="6553">
+      <class name="fpoly.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:28:59 ICT" name="setUp" finished-at="2026-03-10T13:29:01 ICT" duration-ms="2195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginLockedUser()[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:01 ICT" name="testLoginLockedUser" finished-at="2026-03-10T13:29:02 ICT" duration-ms="307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginLockedUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:02 ICT" name="tearDown" finished-at="2026-03-10T13:29:02 ICT" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:02 ICT" name="setUp" finished-at="2026-03-10T13:29:03 ICT" duration-ms="1532" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginSuccess()[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:03 ICT" name="testLoginSuccess" finished-at="2026-03-10T13:29:04 ICT" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:04 ICT" name="tearDown" finished-at="2026-03-10T13:29:04 ICT" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:04 ICT" name="setUp" finished-at="2026-03-10T13:29:05 ICT" duration-ms="1456" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginWrongPassword()[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:05 ICT" name="testLoginWrongPassword" finished-at="2026-03-10T13:29:05 ICT" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.LoginTest@40ef3420]" started-at="2026-03-10T13:29:05 ICT" name="tearDown" finished-at="2026-03-10T13:29:06 ICT" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- fpoly.LoginTest -->
+    </test> <!-- Login Tests -->
+    <test started-at="2026-03-10T13:29:06 ICT" name="Cart Tests" finished-at="2026-03-10T13:29:10 ICT" duration-ms="4098">
+      <class name="fpoly.cart.CartTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" started-at="2026-03-10T13:29:06 ICT" name="setUp" finished-at="2026-03-10T13:29:07 ICT" duration-ms="1721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddToCart()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" started-at="2026-03-10T13:29:07 ICT" name="testAddToCart" finished-at="2026-03-10T13:29:07 ICT" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" started-at="2026-03-10T13:29:07 ICT" name="tearDown" finished-at="2026-03-10T13:29:08 ICT" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" started-at="2026-03-10T13:29:08 ICT" name="setUp" finished-at="2026-03-10T13:29:09 ICT" duration-ms="1754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRemoveFromCart()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" started-at="2026-03-10T13:29:09 ICT" name="testRemoveFromCart" finished-at="2026-03-10T13:29:10 ICT" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.cart.CartTest@2a3b5b47]" started-at="2026-03-10T13:29:10 ICT" name="tearDown" finished-at="2026-03-10T13:29:10 ICT" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- fpoly.cart.CartTest -->
+    </test> <!-- Cart Tests -->
+    <test started-at="2026-03-10T13:29:10 ICT" name="Checkout Tests" finished-at="2026-03-10T13:29:14 ICT" duration-ms="4227">
+      <class name="fpoly.CheckoutTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.CheckoutTest@799f10e1]" started-at="2026-03-10T13:29:10 ICT" name="setUp" finished-at="2026-03-10T13:29:11 ICT" duration-ms="1763" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCheckoutMissingInfo()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" started-at="2026-03-10T13:29:11 ICT" name="testCheckoutMissingInfo" finished-at="2026-03-10T13:29:12 ICT" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckoutMissingInfo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" started-at="2026-03-10T13:29:12 ICT" name="tearDown" finished-at="2026-03-10T13:29:12 ICT" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:fpoly.CheckoutTest@799f10e1]" started-at="2026-03-10T13:29:12 ICT" name="setUp" finished-at="2026-03-10T13:29:14 ICT" duration-ms="1731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGoToCheckout()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" started-at="2026-03-10T13:29:14 ICT" name="testGoToCheckout" finished-at="2026-03-10T13:29:14 ICT" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:fpoly.CheckoutTest@799f10e1]" started-at="2026-03-10T13:29:14 ICT" name="tearDown" finished-at="2026-03-10T13:29:14 ICT" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- fpoly.CheckoutTest -->
+    </test> <!-- Checkout Tests -->
+  </suite> <!-- SauceDemo_Suite -->
+</testng-results>

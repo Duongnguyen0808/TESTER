@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>TestNG:  6.2 Selenium - TextBox WhiteBox</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>6.2 Selenium - TextBox WhiteBox</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Mar 10 14:40:53 ICT 2026</td>
+</tr>
+<tr><td>Total time:</td><td>85 seconds (85293 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testEmailWithSpace()'><b>testEmailWithSpace</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: Boundary: Email có space ? error</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testValidFullData()'><b>testValidFullData</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: CFG Path 1: Nh?p ð?y ð? + email h?p l? ? output hi?n th?</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testEmptyEmail_ValidSubmit()'><b>testEmptyEmail_ValidSubmit</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: CFG Path 3: Email tr?ng (b? qua) ? output v?n hi?n th?</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testInvalidEmail_NoAt()'><b>testInvalidEmail_NoAt</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: CFG Path 2: Email sai ð?nh d?ng ? field-error, không hi?n th? output</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testLongName()'><b>testLongName</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: Boundary: Name r?t dài ? v?n hi?n th? output</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testOnlyValidEmail()'><b>testOnlyValidEmail</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: Boundary: Ch? nh?p email h?p l? ? output hi?n th? email</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testSpecialCharsInName()'><b>testSpecialCharsInName</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: Boundary: K? t? ð?c bi?t trong Name ? output hi?n th?</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testEmailOnlyAt()'><b>testEmailOnlyAt</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: Boundary: Email ch? có @ ? error</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testAllEmpty()'><b>testAllEmpty</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: Boundary: T?t c? trý?ng tr?ng ? submit ? không có output</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+<tr>
+<td title='com.example.TextBoxWhiteBoxTest.testInvalidEmail_IncompleteDomain()'><b>testInvalidEmail_IncompleteDomain</b><br>Test class: com.example.TextBoxWhiteBoxTest<br>Test method: CFG Path 2b: Email sai — có @ nhýng thi?u domain ? error</td>
+<td></td>
+<td>0</td>
+<td>com.example.TextBoxWhiteBoxTest@34625ccd</td></tr>
+</table><p>
+</body>
+</html>

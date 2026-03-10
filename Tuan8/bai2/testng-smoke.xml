@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Bài 2.1: Chỉ chạy nhóm smoke - quan sát số lượng test được chạy -->
+<suite name="SauceDemo_Suite" verbose="1">
+    <!-- Truyền tham số chung cho toàn bộ suite -->
+    <parameter name="baseUrl" value="https://www.saucedemo.com/"/>
+    <parameter name="browser" value="chrome"/>
+
+    <listeners>
+        <listener class-name="fpoly.VietnameseReportListener"/>
+    </listeners>
+
+    <!-- Phân nhóm: chỉ chạy nhóm smoke -->
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="fpoly.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Cart Tests">
+        <packages>
+            <package name="fpoly.cart"/>
+        </packages>
+    </test>
+    <test name="Checkout Tests">
+        <classes>
+            <class name="fpoly.CheckoutTest"/>
+        </classes>
+    </test>
+</suite>

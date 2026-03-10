@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang='vi'>
+<head>
+<meta charset='UTF-8'>
+<title>Bao Cao Kiem Thu - Bai 2</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; color: #333; padding: 30px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.header { background: linear-gradient(135deg, #0d47a1, #1976d2); color: white; padding: 30px 40px; border-radius: 12px 12px 0 0; text-align: center; }
+.header h1 { font-size: 24px; margin-bottom: 5px; letter-spacing: 1px; }
+.header p { font-size: 13px; opacity: 0.9; }
+.summary { display: flex; justify-content: space-around; background: white; padding: 25px; border-bottom: 1px solid #e0e0e0; }
+.summary-item { text-align: center; }
+.summary-item .number { font-size: 36px; font-weight: bold; }
+.summary-item .label { font-size: 12px; color: #666; margin-top: 4px; text-transform: uppercase; }
+.total .number { color: #1565c0; }
+.pass .number { color: #2e7d32; }
+.fail .number { color: #c62828; }
+.skip .number { color: #f9a825; }
+.rate .number { color: #1565c0; }
+.progress-bar { background: white; padding: 15px 40px 20px; }
+.progress-track { height: 10px; background: #e0e0e0; border-radius: 5px; overflow: hidden; display: flex; }
+.progress-pass { background: #2e7d32; height: 100%; transition: width 0.5s; }
+.progress-fail { background: #c62828; height: 100%; transition: width 0.5s; }
+.progress-skip { background: #f9a825; height: 100%; transition: width 0.5s; }
+.section-title { background: #e3f2fd; padding: 12px 20px; font-size: 15px; font-weight: 600; color: #1565c0; border-left: 4px solid #1565c0; margin: 0; }
+table { width: 100%; border-collapse: collapse; background: white; }
+th { background: #1565c0; color: white; padding: 12px 14px; text-align: left; font-size: 13px; }
+td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 13px; }
+tr:nth-child(even) { background: #fafafa; }
+tr:hover { background: #e3f2fd; }
+.badge { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.badge-pass { background: #e8f5e9; color: #2e7d32; }
+.badge-fail { background: #ffebee; color: #c62828; }
+.badge-skip { background: #fff8e1; color: #f9a825; }
+.group-tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin: 1px 2px; }
+.group-smoke { background: #e8f5e9; color: #2e7d32; }
+.group-regression { background: #e3f2fd; color: #1565c0; }
+.group-sanity { background: #fff3e0; color: #e65100; }
+.class-name { color: #666; font-size: 11px; }
+.footer { background: white; padding: 15px; text-align: center; border-radius: 0 0 12px 12px; border-top: 1px solid #e0e0e0; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class='container'>
+<div class='header'>
+<h1>BAO CAO KIEM THU - BAI 2</h1>
+<p>TestNG Suites, Groups & Parallel Execution | Website: saucedemo.com</p>
+<p style='margin-top:5px;font-size:12px;opacity:0.8'>Suite: SauceDemo_Suite | Thoi gian: 10/03/2026 13:29:14</p>
+</div>
+<div class='summary'>
+<div class='summary-item total'><div class='number'>7</div><div class='label'>Tong So Test</div></div>
+<div class='summary-item pass'><div class='number'>7</div><div class='label'>Thanh Cong</div></div>
+<div class='summary-item fail'><div class='number'>0</div><div class='label'>That Bai</div></div>
+<div class='summary-item skip'><div class='number'>0</div><div class='label'>Bo Qua</div></div>
+<div class='summary-item rate'><div class='number'>100%</div><div class='label'>Ty Le Pass</div></div>
+</div>
+<div class='progress-bar'><div class='progress-track'>
+<div class='progress-pass' style='width:100,0%'></div>
+<div class='progress-fail' style='width:0,0%'></div>
+<div class='progress-skip' style='width:0,0%'></div>
+</div></div>
+<div class='section-title'>CheckoutTest - Kiem Thu Thanh Toan</div>
+<table>
+<thead><tr>
+<th style='width:5%'>STT</th>
+<th style='width:22%'>Ten Test Case</th>
+<th style='width:30%'>Mo Ta</th>
+<th style='width:15%'>Groups</th>
+<th style='width:10%'>Thoi Gian</th>
+<th style='width:18%'>Ket Qua</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style='text-align:center;font-weight:bold'>1</td>
+<td><strong>testCheckoutMissingInfo</strong></td>
+<td>Nhan Continue khong dien thong tin, kiem tra loi 'First Name is required'</td>
+<td><span class='group-tag group-regression'>regression</span> </td>
+<td style='text-align:center'>0,23 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+<tr>
+<td style='text-align:center;font-weight:bold'>2</td>
+<td><strong>testGoToCheckout</strong></td>
+<td>Vao trang checkout tu gio hang, kiem tra URL checkout-step-one</td>
+<td><span class='group-tag group-regression'>regression</span> <span class='group-tag group-smoke'>smoke</span> </td>
+<td style='text-align:center'>0,17 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+</tbody>
+</table>
+<div class='section-title'>LoginTest - Kiem Thu Dang Nhap</div>
+<table>
+<thead><tr>
+<th style='width:5%'>STT</th>
+<th style='width:22%'>Ten Test Case</th>
+<th style='width:30%'>Mo Ta</th>
+<th style='width:15%'>Groups</th>
+<th style='width:10%'>Thoi Gian</th>
+<th style='width:18%'>Ket Qua</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style='text-align:center;font-weight:bold'>3</td>
+<td><strong>testLoginLockedUser</strong></td>
+<td>Dung locked_out_user, kiem tra thong bao 'Sorry, this user has been locked out'</td>
+<td><span class='group-tag group-regression'>regression</span> <span class='group-tag group-sanity'>sanity</span> </td>
+<td style='text-align:center'>0,31 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+<tr>
+<td style='text-align:center;font-weight:bold'>4</td>
+<td><strong>testLoginSuccess</strong></td>
+<td>Dang nhap thanh cong voi user/pass hop le, chuyen sang /inventory.html</td>
+<td><span class='group-tag group-regression'>regression</span> <span class='group-tag group-smoke'>smoke</span> </td>
+<td style='text-align:center'>0,35 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+<tr>
+<td style='text-align:center;font-weight:bold'>5</td>
+<td><strong>testLoginWrongPassword</strong></td>
+<td>Nhap sai mat khau, kiem tra thong bao loi xuat hien</td>
+<td><span class='group-tag group-regression'>regression</span> </td>
+<td style='text-align:center'>0,24 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+</tbody>
+</table>
+<div class='section-title'>CartTest - Kiem Thu Gio Hang</div>
+<table>
+<thead><tr>
+<th style='width:5%'>STT</th>
+<th style='width:22%'>Ten Test Case</th>
+<th style='width:30%'>Mo Ta</th>
+<th style='width:15%'>Groups</th>
+<th style='width:10%'>Thoi Gian</th>
+<th style='width:18%'>Ket Qua</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style='text-align:center;font-weight:bold'>6</td>
+<td><strong>testAddToCart</strong></td>
+<td>Them san pham vao gio hang, kiem tra badge hien thi so 1</td>
+<td><span class='group-tag group-regression'>regression</span> <span class='group-tag group-smoke'>smoke</span> </td>
+<td style='text-align:center'>0,15 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+<tr>
+<td style='text-align:center;font-weight:bold'>7</td>
+<td><strong>testRemoveFromCart</strong></td>
+<td>Xoa san pham khoi gio hang, kiem tra badge bien mat</td>
+<td><span class='group-tag group-regression'>regression</span> </td>
+<td style='text-align:center'>0,16 giay</td>
+<td style='text-align:center'><span class='badge badge-pass'>PASS</span></td>
+</tr>
+</tbody>
+</table>
+<div class='footer'>TestNG + Selenium WebDriver + ThreadLocal | Lab 8 - Tuan 8 - Bai 2</div>
+</div>
+</body>
+</html>

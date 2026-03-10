@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang='vi'>
+<head>
+<meta charset='UTF-8'>
+<title>Báo Cáo Kiểm Thử — Bài 7 Comprehensive</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f0f2f5;color:#333}
+.hdr{background:linear-gradient(135deg,#1b5e20,#43a047);color:#fff;padding:32px 40px}
+.hdr h1{font-size:26px;margin-bottom:6px}.hdr p{opacity:.85;font-size:14px}
+.ctn{max-width:1280px;margin:24px auto;padding:0 20px}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px}
+.cd{background:#fff;border-radius:12px;padding:18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.07);border-top:4px solid #ccc}
+.cd.tot{border-top-color:#1b5e20}.cd.ps{border-top-color:#2e7d32}.cd.fl{border-top-color:#c62828}
+.cd.rt{border-top-color:#f57f17}.cd.cc{border-top-color:#6a1b9a}
+.cd .num{font-size:34px;font-weight:700;margin:6px 0}
+.cd .lbl{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1px}
+.cd.tot .num{color:#1b5e20}.cd.ps .num{color:#2e7d32}.cd.fl .num{color:#c62828}
+.cd.rt .num{color:#f57f17}.cd.cc .num{color:#6a1b9a}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.info{background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #43a047}
+.info.mcdc{border-left-color:#6a1b9a}
+.info h3{font-size:15px;margin-bottom:8px;color:#1b5e20}
+.info.mcdc h3{color:#6a1b9a}
+.info p,.info li{font-size:13px;line-height:1.7}.info ul{margin-left:18px}
+.sec{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:24px;overflow:hidden}
+.sec-t{padding:14px 24px;font-size:15px;font-weight:600;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:10px}
+.sec-t .cnt{background:#e8f5e9;color:#1b5e20;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:600}
+.sec-t .cnt.mcdc{background:#f3e5f5;color:#6a1b9a}
+.sec-t .cnt.dp{background:#e3f2fd;color:#1565c0}
+table{width:100%;border-collapse:collapse}
+th{background:#fafafa;padding:10px 12px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#666;border-bottom:2px solid #e0e0e0}
+td{padding:9px 12px;border-bottom:1px solid #f0f0f0;font-size:13px}tr:hover{background:#f9fafb}
+.badge{display:inline-block;padding:3px 13px;border-radius:20px;font-size:12px;font-weight:600}
+.badge.pass{background:#e8f5e9;color:#2e7d32}.badge.fail{background:#ffebee;color:#c62828}.badge.skip{background:#fff3e0;color:#e65100}
+.meth{font-family:'Consolas',monospace;font-size:12px}
+.desc{color:#555;font-size:12px;margin-top:2px}
+.tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:10px;font-weight:600;margin-right:3px}
+.tag.bp{background:#e8f5e9;color:#1b5e20}.tag.mc{background:#f3e5f5;color:#6a1b9a}.tag.dp{background:#e3f2fd;color:#1565c0}
+.tag.ex{background:#ffebee;color:#c62828}.tag.allure{background:#fff8e1;color:#f57f17}
+.time{color:#aaa;font-size:13px}
+.jc{background:#e8f5e9;border-left:4px solid #2e7d32;padding:14px 20px;border-radius:0 8px 8px 0;margin-bottom:24px}
+.jc p{font-size:13px;line-height:1.7}
+.err{color:#c62828;font-size:11px;margin-top:3px;font-family:monospace;max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.footer{text-align:center;padding:20px;color:#999;font-size:13px}
+</style>
+</head>
+<body>
+<div class='hdr'>
+<h1>&#128202; BÁO CÁO KIỂM THỬ TOÀN DIỆN — BÀI 7</h1>
+<p>OrderProcessor | Basis Path (CC=9) + MC/DC (D2&amp;&amp;D3) | Allure + JaCoCo | 10/03/2026 14:53:58</p>
+</div>
+<div class='ctn'>
+<div class='info-grid'>
+<div class='info'><h3>&#128736; Basis Path Analysis</h3><ul>
+<li><strong>CFG:</strong> 22 nodes, 29 edges</li>
+<li><strong>CC = E−N+2P = 29−22+2 = 9</strong></li>
+<li><strong>CC = D+1 = 8+1 = 9</strong></li>
+<li>8 decisions: D1→D8</li>
+<li>9 basis paths + 1 boundary = <strong>10 TC</strong></li>
+</ul></div>
+<div class='info mcdc'><h3>&#128300; MC/DC — D2 &amp;&amp; D3</h3><ul>
+<li><strong>A:</strong> couponCode != null</li>
+<li><strong>B:</strong> !couponCode.isEmpty()</li>
+<li><strong>C:</strong> couponCode.equals("SALE10")</li>
+<li>Pairs: A{1↔4}, B{1↔3}, C{1↔2}</li>
+<li>Tối thiểu: <strong>n+1 = 4 TC</strong></li>
+</ul></div>
+</div>
+<div class='jc'>
+<p>&#128200; <strong>JaCoCo:</strong> <code>target/site/jacoco/index.html</code> &nbsp;|&nbsp; &#128202; <strong>Allure:</strong> <code>target/allure-results/</code> (chạy <code>allure serve target/allure-results</code> nếu có Allure CLI)</p>
+</div>
+<div class='cards'>
+<div class='cd tot'><div class='lbl'>Tổng test</div><div class='num'>25</div></div>
+<div class='cd ps'><div class='lbl'>Thành công</div><div class='num'>25</div></div>
+<div class='cd fl'><div class='lbl'>Thất bại</div><div class='num'>0</div></div>
+<div class='cd rt'><div class='lbl'>Tỷ lệ đạt</div><div class='num'>100%</div></div>
+<div class='cd cc'><div class='lbl'>CC</div><div class='num'>9</div></div>
+</div>
+<div class='sec'>
+<div class='sec-t'>&#128736; Basis Path Tests (CC=9) <span class='cnt'>10/10 passed</span></div>
+<table>
+<tr><th>#</th><th>Phương thức</th><th>Mô tả</th><th>Loại</th><th>Trạng thái</th><th>Thời gian</th></tr>
+<tr><td>1</td><td><div class='meth'>testP1_ItemsNull()</div></td><td><div class='desc'>P1: D1=T — items=null → exception</div></td><td><span class='tag bp'>BasisPath</span><span class='tag ex'>Exception</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>4 ms</td></tr>
+<tr><td>2</td><td><div class='meth'>testP1b_ItemsEmpty()</div></td><td><div class='desc'>P1b: D1=T — items rỗng → exception</div></td><td><span class='tag bp'>BasisPath</span><span class='tag ex'>Exception</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>3</td><td><div class='meth'>testP2_NoCoupon_Gold_Online()</div></td><td><div class='desc'>P2: D2=F, D5=T(GOLD), D7=T, D8=T(online) → 125,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>4</td><td><div class='meth'>testP3_NoCoupon_Normal_Online()</div></td><td><div class='desc'>P3: D2=F, D5=F, D6=F(NORMAL), D7=T, D8=T → 130,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>5</td><td><div class='meth'>testP4_NoCoupon_Platinum_Online()</div></td><td><div class='desc'>P4: D2=F, D6=T(PLATINUM), D7=T, D8=T → 120,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>6</td><td><div class='meth'>testP5_Sale10_Normal_Online()</div></td><td><div class='desc'>P5: D2=T, D3=T(SALE10), D6=F, D7=T, D8=T → 210,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>7</td><td><div class='meth'>testP6_Sale20_Normal_Online()</div></td><td><div class='desc'>P6: D2=T, D3=F, D4=T(SALE20), D7=T, D8=T → 190,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>8</td><td><div class='meth'>testP7_InvalidCoupon()</div></td><td><div class='desc'>P7: D2=T, D3=F, D4=F — coupon invalid → exception</div></td><td><span class='tag bp'>BasisPath</span><span class='tag ex'>Exception</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>9</td><td><div class='meth'>testP8_FreeShipping()</div></td><td><div class='desc'>P8: D2=F, D7=F(≥500K) → free ship = 600,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>10</td><td><div class='meth'>testP9_NoCoupon_Normal_COD()</div></td><td><div class='desc'>P9: D2=F, D7=T, D8=F(COD) → ship +20K = 120,000</div></td><td><span class='tag bp'>BasisPath</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+</table>
+</div>
+<div class='sec'>
+<div class='sec-t'>&#128300; MC/DC Tests — D2 &amp;&amp; D3 <span class='cnt mcdc'>4/4 passed</span></div>
+<table>
+<tr><th>#</th><th>Phương thức</th><th>Mô tả</th><th>Loại</th><th>Trạng thái</th><th>Thời gian</th></tr>
+<tr><td>1</td><td><div class='meth'>testMC1_AllTrue_SALE10()</div></td><td><div class='desc'>MC1: A=T, B=T, C=T — coupon='SALE10' → D2&amp;&amp;D3=TRUE → 210,000</div></td><td><span class='tag mc'>MC/DC</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>2</td><td><div class='meth'>testMC2_C_False_SALE20()</div></td><td><div class='desc'>MC2: A=T, B=T, C=F — coupon='SALE20' → D3=FALSE → 190,000</div></td><td><span class='tag mc'>MC/DC</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>3</td><td><div class='meth'>testMC3_B_False_EmptyCoupon()</div></td><td><div class='desc'>MC3: A=T, B=F — coupon='' → D2=FALSE → 230,000</div></td><td><span class='tag mc'>MC/DC</span><span class='tag ex'>Exception</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>4</td><td><div class='meth'>testMC4_A_False_NullCoupon()</div></td><td><div class='desc'>MC4: A=F — coupon=null → D2=FALSE → 230,000</div></td><td><span class='tag mc'>MC/DC</span><span class='tag ex'>Exception</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+</table>
+</div>
+<div class='sec'>
+<div class='sec-t'>&#128202; DataProvider — Tổng hợp <span class='cnt dp'>11/11 passed</span></div>
+<table>
+<tr><th>#</th><th>Phương thức</th><th>Mô tả</th><th>Loại</th><th>Trạng thái</th><th>Thời gian</th></tr>
+<tr><td>1</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@4d68b571], SALE10, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>2</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@6af91cc8], SALE20, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>3</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@37d28f02], , NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>4</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@33f2df51], null, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>5</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@7ee8130e], null, GOLD, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>46 ms</td></tr>
+<tr><td>6</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@2e17a321], null, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>7</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@32e652b6], null, PLATINUM, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>8</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@2aa7399c], SALE10, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>9</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@19a31b9d], SALE20, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>10</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@65eb76cd], null, NORMAL, MOMO, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>3 ms</td></tr>
+<tr><td>11</td><td><div class='meth'>testCalculateTotal_DataProvider() ([com.example.Item@5a0bef24], null, NORMAL, COD, ...)</div></td><td><div class='desc'>DataProvider: Basis Path + MC/DC</div></td><td><span class='tag dp'>DataProvider</span><span class='tag allure'>Allure</span></td><td><span class='badge pass'>Đạt</span></td><td class='time'>4 ms</td></tr>
+</table>
+</div>
+<div class='footer'>Báo cáo tạo tự động — TestNG 7.8.0 | Allure 2.24.0 | JaCoCo 0.8.11</div>
+</div>
+</body>
+</html>

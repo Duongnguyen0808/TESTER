@@ -1,0 +1,250 @@
+<html>
+<head>
+<title>TestNG:  6.1 TDD - PhoneValidator</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>6.1 TDD - PhoneValidator</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>34/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Mar 10 14:40:53 ICT 2026</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (154 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 0512345678, true, B7: prefix 05</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: +84, false, B5: only +84</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB6_Prefix03()'><b>testB6_Prefix03</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B6: ð?u s? 03x h?p l? ? true</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB5_OnlyPlus84()'><b>testB5_OnlyPlus84</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B5: ch? có +84 ? false (quá ng?n)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 0312345678, true, B6: prefix 03</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: +84112345678, false, B3: +84 invalid prefix</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB2_ValidWithSpaces()'><b>testB2_ValidWithSpaces</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B2: có kho?ng tr?ng h?p l? ? true</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 091 234 5678, true, B2: valid with spaces</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB9_Prefix08()'><b>testB9_Prefix08</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B9: ð?u s? 08x h?p l? ? true</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP6_ValidStartWith0()'><b>testP6_ValidStartWith0</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P6: h?p l? b?t ð?u b?ng 0 ? true (D6=True)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB1_OnlySpaces()'><b>testB1_OnlySpaces</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B1: chu?i toàn kho?ng tr?ng ? false</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 0812345678, true, B9: prefix 08</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP1b_EmptyInput()'><b>testP1b_EmptyInput</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P1b: phone='' ? false (D1=True, empty)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB3_Plus84InvalidPrefix()'><b>testB3_Plus84InvalidPrefix</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B3: +84 nhýng ð?u s? sai ? false</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: null, false, P1: null</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP7_ValidStartWith84()'><b>testP7_ValidStartWith84</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P7: h?p l? b?t ð?u b?ng +84 ? true (D3=True, chu?n hóa)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB4_TooLong()'><b>testB4_TooLong</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B4: quá dài 11 s? ? false</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB8_Prefix07()'><b>testB8_Prefix07</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B8: ð?u s? 07x h?p l? ? true</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP3_NotStartWith0Or84()'><b>testP3_NotStartWith0Or84</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P3: không b?t ð?u 0 ho?c +84 ? false (D3=F, D4=False)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 0712345678, true, B8: prefix 07</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP1_NullInput()'><b>testP1_NullInput</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P1: phone=null ? false (D1=True)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 0112345678, false, P5: invalid prefix 01</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: +84912345678, true, P7: valid +84</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters:    , false, B1: only spaces</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP4_WrongLength()'><b>testP4_WrongLength</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P4: b?t ð?u 0 nhýng sai ð? dài ? false (D5=False)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: , false, P1b: empty</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 091234567, false, P4: wrong length</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 1234567890, false, P3: not start 0/+84</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 0912345678, true, P6: valid 09x</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testB7_Prefix05()'><b>testB7_Prefix05</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: B7: ð?u s? 05x h?p l? ? true</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP2_InvalidChars()'><b>testP2_InvalidChars</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P2: k? t? không h?p l? ? false (D2=True)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testP5_InvalidPrefix()'><b>testP5_InvalidPrefix</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: P5: 10 s? nhýng ð?u s? 01 không h?p l? ? false (D6=False)</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 09abc12345, false, P2: invalid chars</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+<tr>
+<td title='com.example.PhoneValidatorTest.testPhoneValidator_DataProvider()'><b>testPhoneValidator_DataProvider</b><br>Test class: com.example.PhoneValidatorTest<br>Test method: DataProvider: t?t c? BasisPath + Boundary<br>Parameters: 09123456789, false, B4: too long</td>
+<td></td>
+<td>0</td>
+<td>com.example.PhoneValidatorTest@42f48531</td></tr>
+</table><p>
+</body>
+</html>

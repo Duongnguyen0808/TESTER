@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="vi"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PhoneValidator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bai6-whitebox-selenium</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">PhoneValidator.java</span></div><h1>PhoneValidator.java</h1><pre class="source lang-java linenums">package com.example;
+
+/**
+ * Kiểm tra số điện thoại Việt Nam hợp lệ.
+ * Quy tắc:
+ * - Bắt đầu bằng 0 hoặc +84
+ * - Sau chuẩn hóa: 03x, 05x, 07x, 08x, 09x
+ * - Tổng 10 chữ số (sau chuẩn hóa)
+ * - Chỉ chứa 0-9, +, space
+ */
+<span class="nc" id="L11">public class PhoneValidator {</span>
+
+    public static boolean isValid(String phone) {
+        // D1: null hoặc rỗng
+<span class="fc bfc" id="L15" title="All 4 branches covered.">        if (phone == null || phone.trim().isEmpty()) {</span>
+<span class="fc" id="L16">            return false;</span>
+        }
+
+        // Xóa khoảng trắng
+<span class="fc" id="L20">        String cleaned = phone.replaceAll(&quot;\\s+&quot;, &quot;&quot;);</span>
+
+        // D2: chỉ cho phép chữ số và dấu +
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (!cleaned.matches(&quot;[0-9+]+&quot;)) {</span>
+<span class="fc" id="L24">            return false;</span>
+        }
+
+        // D3: chuẩn hóa +84 → 0
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (cleaned.startsWith(&quot;+84&quot;)) {</span>
+<span class="fc" id="L29">            cleaned = &quot;0&quot; + cleaned.substring(3);</span>
+        }
+
+        // D4: phải bắt đầu bằng 0
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (!cleaned.startsWith(&quot;0&quot;)) {</span>
+<span class="fc" id="L34">            return false;</span>
+        }
+
+        // D5: phải đúng 10 chữ số
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (cleaned.length() != 10) {</span>
+<span class="fc" id="L39">            return false;</span>
+        }
+
+        // D6: đầu số hợp lệ
+<span class="fc" id="L43">        String prefix = cleaned.substring(0, 2);</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (!prefix.matches(&quot;03|05|07|08|09&quot;)) {</span>
+<span class="fc" id="L45">            return false;</span>
+        }
+
+<span class="fc" id="L48">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

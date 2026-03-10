@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Bai6 - White-Box + Selenium Integration" verbose="1">
+    <listeners>
+        <listener class-name="com.example.VietnameseReportListener"/>
+    </listeners>
+
+    <test name="6.1 TDD - PhoneValidator">
+        <classes>
+            <class name="com.example.PhoneValidatorTest"/>
+        </classes>
+    </test>
+
+    <test name="6.2 Selenium - TextBox WhiteBox">
+        <classes>
+            <class name="com.example.TextBoxWhiteBoxTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='vi'>
+<head>
+<meta charset='UTF-8'>
+<title>Báo Cáo Kiểm Thử - Bài 4 Basis Path</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; color: #333; }
+.header { background: linear-gradient(135deg, #4a148c, #7b1fa2); color: white; padding: 30px 40px; }
+.header h1 { font-size: 26px; margin-bottom: 5px; }
+.header p { opacity: 0.85; font-size: 14px; }
+.container { max-width: 1100px; margin: 25px auto; padding: 0 20px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.card { background: white; border-radius: 12px; padding: 22px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-top: 4px solid #ccc; }
+.card.total { border-top-color: #4a148c; } .card.pass { border-top-color: #2e7d32; }
+.card.fail { border-top-color: #c62828; } .card.rate { border-top-color: #f57f17; }
+.card .number { font-size: 36px; font-weight: 700; margin: 8px 0; }
+.card .label { font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: 1px; }
+.card.total .number { color: #4a148c; } .card.pass .number { color: #2e7d32; }
+.card.fail .number { color: #c62828; } .card.rate .number { color: #f57f17; }
+.info-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px; }
+.info-box h3 { color: #4a148c; margin-bottom: 8px; font-size: 15px; }
+.info-box p { font-size: 13px; line-height: 1.8; }
+.section { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 24px; overflow: hidden; }
+.section-title { padding: 16px 24px; font-size: 16px; font-weight: 600; border-bottom: 1px solid #e0e0e0; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #f5f5f5; padding: 12px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #666; border-bottom: 2px solid #e0e0e0; }
+td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+tr:hover { background: #f8f9fa; }
+.badge { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.badge.pass { background: #e8f5e9; color: #2e7d32; }
+.badge.fail { background: #ffebee; color: #c62828; }
+.badge.skip { background: #fff3e0; color: #e65100; }
+.method { font-family: 'Consolas', monospace; font-size: 13px; }
+.desc { color: #555; font-size: 13px; margin-top: 3px; }
+.path-tag { display: inline-block; background: #ede7f6; color: #4a148c; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-right: 6px; }
+.time { color: #999; font-size: 13px; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class='header'>
+<h1>&#128202; BÁO CÁO KIỂM THỬ ĐƯỜNG CƠ SỞ (BASIS PATH)</h1>
+<p>Bài 4 — Path Coverage &amp; Cyclomatic Complexity | 10/03/2026 14:07:57</p>
+</div>
+<div class='container'>
+<div class='info-box'>
+<h3>&#128200; Thông tin Cyclomatic Complexity</h3>
+<p><strong>Hàm:</strong> <code>tinhPhiShip(double trongLuong, String vung, boolean laMember)</code><br>
+<strong>Số decision (D):</strong> 7 (D1–D7)<br>
+<strong>CC = D + 1 = 8</strong> → Cần 8 đường cơ sở (basis path) → 8 test case<br>
+<strong>Kiểm tra:</strong> CC = E − N + 2P = 20 − 14 + 2 = <strong>8</strong> ✓</p>
+</div>
+<div class='cards'>
+<div class='card total'><div class='label'>Tổng test (CC)</div><div class='number'>8</div></div>
+<div class='card pass'><div class='label'>Thành công</div><div class='number'>8</div></div>
+<div class='card fail'><div class='label'>Thất bại</div><div class='number'>0</div></div>
+<div class='card rate'><div class='label'>Tỷ lệ đạt</div><div class='number'>100%</div></div>
+</div>
+<div class='section'>
+<div class='section-title'>&#128196; Chi tiết 8 đường cơ sở — PhiShipBasisPathTest</div>
+<table>
+<tr><th style='width:5%'>#</th><th style='width:28%'>Phương thức</th><th style='width:32%'>Mô tả (Basis Path)</th><th style='width:15%'>Trạng thái</th><th style='width:20%'>Thời gian</th></tr>
+<tr><td>1</td><td><div class='method'>testPath1_InvalidWeight()</div></td><td><span class='path-tag'>Path 1</span><div class='desc'>Path 1: Trọng lượng không hợp lệ (trongLuong <= 0)</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>10 ms</td></tr>
+<tr><td>2</td><td><div class='method'>testPath2_NoiThanhNheKhongMember()</div></td><td><span class='path-tag'>Path 2</span><div class='desc'>Path 2: Nội thành, <= 5kg, không member</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>3</td><td><div class='method'>testPath3_NoiThanhNangKhongMember()</div></td><td><span class='path-tag'>Path 3</span><div class='desc'>Path 3: Nội thành, > 5kg, không member</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>4</td><td><div class='method'>testPath4_NgoaiThanhNheKhongMember()</div></td><td><span class='path-tag'>Path 4</span><div class='desc'>Path 4: Ngoại thành, <= 3kg, không member</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>5</td><td><div class='method'>testPath5_NgoaiThanhNangKhongMember()</div></td><td><span class='path-tag'>Path 5</span><div class='desc'>Path 5: Ngoại thành, > 3kg, không member</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>6</td><td><div class='method'>testPath6_TinhKhacNheKhongMember()</div></td><td><span class='path-tag'>Path 6</span><div class='desc'>Path 6: Tỉnh khác, <= 2kg, không member</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>7</td><td><div class='method'>testPath7_TinhKhacNangKhongMember()</div></td><td><span class='path-tag'>Path 7</span><div class='desc'>Path 7: Tỉnh khác, > 2kg, không member</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>8</td><td><div class='method'>testPath8_TinhKhacNheMember()</div></td><td><span class='path-tag'>Path 8</span><div class='desc'>Path 8: Tỉnh khác, <= 2kg, là member (giảm 10%)</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+</table>
+</div>
+<div class='footer'>Báo cáo tạo tự động bởi VietnameseReportListener — TestNG 7.8.0</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='vi'>
+<head>
+<meta charset='UTF-8'>
+<title>Báo Cáo Kiểm Thử - Bài 3 Coverage</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; color: #333; }
+.header { background: linear-gradient(135deg, #1a237e, #0d47a1); color: white; padding: 30px 40px; }
+.header h1 { font-size: 26px; margin-bottom: 5px; }
+.header p { opacity: 0.85; font-size: 14px; }
+.container { max-width: 1100px; margin: 25px auto; padding: 0 20px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.card { background: white; border-radius: 12px; padding: 22px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-top: 4px solid #ccc; }
+.card.total { border-top-color: #1a237e; }
+.card.pass { border-top-color: #2e7d32; }
+.card.fail { border-top-color: #c62828; }
+.card.rate { border-top-color: #f57f17; }
+.card .number { font-size: 36px; font-weight: 700; margin: 8px 0; }
+.card .label { font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: 1px; }
+.card.total .number { color: #1a237e; }
+.card.pass .number { color: #2e7d32; }
+.card.fail .number { color: #c62828; }
+.card.rate .number { color: #f57f17; }
+.section { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 24px; overflow: hidden; }
+.section-title { padding: 16px 24px; font-size: 16px; font-weight: 600; border-bottom: 1px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+.section-title .icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
+.section-title .icon.cls { background: #1565c0; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #f5f5f5; padding: 12px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #666; border-bottom: 2px solid #e0e0e0; }
+td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+tr:hover { background: #f8f9fa; }
+.badge { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.badge.pass { background: #e8f5e9; color: #2e7d32; }
+.badge.fail { background: #ffebee; color: #c62828; }
+.badge.skip { background: #fff3e0; color: #e65100; }
+.method-name { font-family: 'Consolas', monospace; font-size: 13px; }
+.params { color: #888; font-size: 12px; margin-top: 2px; }
+.time { color: #999; font-size: 13px; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 13px; }
+.info-box { background: #e3f2fd; border-left: 4px solid #1565c0; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+.info-box h3 { color: #1565c0; margin-bottom: 8px; font-size: 15px; }
+.info-box p { font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class='header'>
+<h1>&#128202; BÁO CÁO KIỂM THỬ HỘP TRẮNG</h1>
+<p>Bài 3 — Statement &amp; Branch Coverage | 10/03/2026 14:00:38</p>
+</div>
+<div class='container'>
+<div class='info-box'>
+<h3>&#9989; Mục tiêu kiểm thử</h3>
+<p><strong>Bài 3.1:</strong> Hàm <code>xepLoai()</code> — 5 nút quyết định, 10 nhánh, 6 TC đạt 100% Branch Coverage<br>
+<strong>Bài 3.2:</strong> Hàm <code>tinhTienNuoc()</code> — 5 nút quyết định, 10 nhánh, 6 TC đạt 100% Branch Coverage</p>
+</div>
+<div class='cards'>
+<div class='card total'><div class='label'>Tổng test</div><div class='number'>12</div></div>
+<div class='card pass'><div class='label'>Thành công</div><div class='number'>12</div></div>
+<div class='card fail'><div class='label'>Thất bại</div><div class='number'>0</div></div>
+<div class='card rate'><div class='label'>Tỷ lệ đạt</div><div class='number'>100%</div></div>
+</div>
+<div class='section'>
+<div class='section-title'><span class='icon cls'>&#128196;</span> Bài 3.1 — XepLoaiTest</div>
+<table>
+<tr><th style='width:5%'>#</th><th style='width:35%'>Phương thức</th><th style='width:25%'>Mô tả nhánh</th><th style='width:15%'>Trạng thái</th><th style='width:20%'>Thời gian</th></tr>
+<tr><td>1</td><td><div class='method-name'>testDiem3CoThiLai_ThiLai()</div></td><td><div class='params'>N4-F, N5-True: Thi lại</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>5 ms</td></tr>
+<tr><td>2</td><td><div class='method-name'>testDiem3KhongThiLai_YeuHocLai()</div></td><td><div class='params'>N4-F, N5-False: Học lại</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>3</td><td><div class='method-name'>testDiem6_XepLoaiTrungBinh()</div></td><td><div class='params'>N3-F, N4-True: Trung Bình</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>4</td><td><div class='method-name'>testDiem7_XepLoaiKha()</div></td><td><div class='params'>N2-F, N3-True: xếp loại Khá</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>5</td><td><div class='method-name'>testDiem9_XepLoaiGioi()</div></td><td><div class='params'>N1-F, N2-True: xếp loại Giỏi</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>6</td><td><div class='method-name'>testDiemAm_DiemKhongHopLe()</div></td><td><div class='params'>N1-True: điểm không hợp lệ</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+</table>
+</div>
+<div class='section'>
+<div class='section-title'><span class='icon cls'>&#128196;</span> Bài 3.2 — TinhTienNuocTest</div>
+<table>
+<tr><th style='width:5%'>#</th><th style='width:35%'>Phương thức</th><th style='width:25%'>Mô tả nhánh</th><th style='width:15%'>Trạng thái</th><th style='width:20%'>Thời gian</th></tr>
+<tr><td>1</td><td><div class='method-name'>testDanCu_15m3_10Den20()</div></td><td><div class='params'>N4-F, N5-True: 10-20m³</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>2 ms</td></tr>
+<tr><td>2</td><td><div class='method-name'>testDanCu_25m3_Tren20()</div></td><td><div class='params'>N4-F, N5-False: >20m³</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>3</td><td><div class='method-name'>testDanCu_5m3_Duoi10()</div></td><td><div class='params'>N2-F, N3-T, N4-True: ≤10m³</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>4</td><td><div class='method-name'>testHoNgheo_5m3()</div></td><td><div class='params'>N1-F, N2-True: hộ nghèo</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+<tr><td>5</td><td><div class='method-name'>testKinhDoanh_5m3()</div></td><td><div class='params'>N2-F, N3-False: kinh doanh</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>1 ms</td></tr>
+<tr><td>6</td><td><div class='method-name'>testSoM3BangKhong_TraVe0()</div></td><td><div class='params'>N1-True: soM3 ≤ 0 → 0</div></td><td><span class='badge pass'>Đạt</span></td><td class='time'>0 ms</td></tr>
+</table>
+</div>
+<div class='footer'>Báo cáo tạo tự động bởi VietnameseReportListener — TestNG 7.8.0</div>
+</div>
+</body>
+</html>
