@@ -1,0 +1,37 @@
+[
+  {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "role": "standard",
+    "expectSuccess": true,
+    "description": "Standard user login success"
+  },
+  {
+    "username": "visual_user",
+    "password": "secret_sauce",
+    "role": "visual",
+    "expectSuccess": true,
+    "description": "Visual user login success"
+  },
+  {
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "role": "locked",
+    "expectSuccess": false,
+    "description": "Locked user should fail"
+  },
+  {
+    "username": "standard_user",
+    "password": "wrong_password",
+    "role": "standard",
+    "expectSuccess": false,
+    "description": "Wrong password should fail"
+  },
+  {
+    "username": "",
+    "password": "secret_sauce",
+    "role": "empty_username",
+    "expectSuccess": false,
+    "description": "Empty username should fail"
+  }
+]

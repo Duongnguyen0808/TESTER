@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Lab9-Bai6-Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="env" value="dev"/>
+  <listeners>
+    <listener class-name="framework.utils.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Flaky Test With Retry(failed)" verbose="0">
+    <classes>
+      <class name="tests.FlakySimulationTest">
+        <methods>
+          <include name="beforeEach"/>
+          <include name="flakyScenario"/>
+        </methods>
+      </class> <!-- tests.FlakySimulationTest -->
+    </classes>
+  </test> <!-- Flaky Test With Retry(failed) -->
+</suite> <!-- Failed suite [Lab9-Bai6-Suite] -->

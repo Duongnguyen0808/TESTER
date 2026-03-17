@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Lab9-Bai4-Suite" parallel="methods" thread-count="3">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="dev"/>
+
+    <test name="JSON-And-Faker-Tests">
+        <classes>
+            <class name="tests.UserLoginTest"/>
+            <class name="tests.CheckoutFakerTest"/>
+        </classes>
+    </test>
+</suite>

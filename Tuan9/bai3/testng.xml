@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Lab9-Bai3-Suite" parallel="methods" thread-count="3">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="dev"/>
+
+    <test name="Smoke-Only-From-SmokeCases-Sheet">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginExcelDDTTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression-From-All-Sheets">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginExcelDDTTest"/>
+        </classes>
+    </test>
+</suite>
