@@ -1,0 +1,9 @@
+framework\utils\JsonDataReader$1.class
+framework\pages\InventoryPage.class
+framework\base\BasePage.class
+framework\base\BaseTest.class
+framework\pages\CheckoutPage.class
+framework\pages\LoginPage.class
+framework\utils\JsonDataReader.class
+framework\config\ConfigReader.class
+framework\pages\CartPage.class

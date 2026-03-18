@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Lab9_Bai2_Suite" class="navigator-link">
+              <span class="suite-name border-passed">Lab9-Bai2-Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span>C:\Users\duong\Hoc\TESTER\Tuan9\bai2\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Lab9_Bai2_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Lab9_Bai2_Suite" class="hide-methods passed suite-Lab9_Bai2_Suite"> (hide)</a> <!-- hide-methods passed suite-Lab9_Bai2_Suite -->
+                      <a href="#" panel-name="suite-Lab9_Bai2_Suite" class="show-methods passed suite-Lab9_Bai2_Suite"> (show)</a> <!-- show-methods passed suite-Lab9_Bai2_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Lab9_Bai2_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.CartTest" class="method navigator-link" hash-for-method="addItemByNameShouldAppearInCart(Sauce Labs Bike Light)">addItemByNameShouldAppearInCart(Sauce Labs Bike Light)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.CartTest" class="method navigator-link" hash-for-method="addItemByNameShouldAppearInCart(Sauce Labs Backpack)">addItemByNameShouldAppearInCart(Sauce Labs Backpack)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.CartTest" class="method navigator-link" hash-for-method="emptyCartShouldReturnZero">emptyCartShouldReturnZero</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.CartTest" class="method navigator-link" hash-for-method="fluentChainShouldWork">fluentChainShouldWork</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginExpectingFailureShouldReturnErrorMessage">loginExpectingFailureShouldReturnErrorMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginSuccessShouldNavigateToInventory">loginSuccessShouldNavigateToInventory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginWithJsonData(locked_out_user, secret_sauce, fail)">loginWithJsonData(locked_out_user, secret_sauce, fail)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginWithJsonData(standard_user, wrong_password, fail)">loginWithJsonData(standard_user, wrong_password, fail)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginWithJsonData(standard_user, secret_sauce, success)">loginWithJsonData(standard_user, secret_sauce, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Lab9_Bai2_Suite" title="tests.CartTest" class="method navigator-link" hash-for-method="removeFirstItemShouldNotThrowAndCanCheckout">removeFirstItemShouldNotThrowAndCanCheckout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Lab9_Bai2_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Lab9_Bai2_Suite" class="panel Lab9_Bai2_Suite">
+          <div class="suite-Lab9_Bai2_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.CartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addItemByNameShouldAppearInCart(Sauce Labs Bike Light)">
+                  </a> <!-- addItemByNameShouldAppearInCart(Sauce Labs Bike Light) -->
+                  <span class="method-name">addItemByNameShouldAppearInCart</span>
+                  <span class="parameters">(Sauce Labs Bike Light)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addItemByNameShouldAppearInCart(Sauce Labs Backpack)">
+                  </a> <!-- addItemByNameShouldAppearInCart(Sauce Labs Backpack) -->
+                  <span class="method-name">addItemByNameShouldAppearInCart</span>
+                  <span class="parameters">(Sauce Labs Backpack)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyCartShouldReturnZero">
+                  </a> <!-- emptyCartShouldReturnZero -->
+                  <span class="method-name">emptyCartShouldReturnZero</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fluentChainShouldWork">
+                  </a> <!-- fluentChainShouldWork -->
+                  <span class="method-name">fluentChainShouldWork</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeFirstItemShouldNotThrowAndCanCheckout">
+                  </a> <!-- removeFirstItemShouldNotThrowAndCanCheckout -->
+                  <span class="method-name">removeFirstItemShouldNotThrowAndCanCheckout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Lab9_Bai2_Suite-class-passed -->
+          <div class="suite-Lab9_Bai2_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginExpectingFailureShouldReturnErrorMessage">
+                  </a> <!-- loginExpectingFailureShouldReturnErrorMessage -->
+                  <span class="method-name">loginExpectingFailureShouldReturnErrorMessage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginSuccessShouldNavigateToInventory">
+                  </a> <!-- loginSuccessShouldNavigateToInventory -->
+                  <span class="method-name">loginSuccessShouldNavigateToInventory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithJsonData(locked_out_user, secret_sauce, fail)">
+                  </a> <!-- loginWithJsonData(locked_out_user, secret_sauce, fail) -->
+                  <span class="method-name">loginWithJsonData</span>
+                  <span class="parameters">(locked_out_user,secret_sauce,fail)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithJsonData(standard_user, wrong_password, fail)">
+                  </a> <!-- loginWithJsonData(standard_user, wrong_password, fail) -->
+                  <span class="method-name">loginWithJsonData</span>
+                  <span class="parameters">(standard_user,wrong_password,fail)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithJsonData(standard_user, secret_sauce, success)">
+                  </a> <!-- loginWithJsonData(standard_user, secret_sauce, success) -->
+                  <span class="method-name">loginWithJsonData</span>
+                  <span class="parameters">(standard_user,secret_sauce,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Lab9_Bai2_Suite-class-passed -->
+        </div> <!-- panel Lab9_Bai2_Suite -->
+        <div panel-name="test-xml-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\duong\Hoc\TESTER\Tuan9\bai2\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;Lab9-Bai2-Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;env&quot; value=&quot;dev&quot;/&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;POM Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;tests.CartTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- POM Tests --&gt;
+&lt;/suite&gt; &lt;!-- Lab9-Bai2-Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Lab9-Bai2-Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">POM Tests (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Lab9-Bai2-Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Lab9-Bai2-Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Lab9_Bai2_Suite');
+function tableData_Lab9_Bai2_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginSuccessShouldNavigateToInventory')
+data.setCell(0, 2, 'tests.LoginTest')
+data.setCell(0, 3, 3248);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginWithJsonData')
+data.setCell(1, 2, 'tests.LoginTest')
+data.setCell(1, 3, 3245);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addItemByNameShouldAppearInCart')
+data.setCell(2, 2, 'tests.CartTest')
+data.setCell(2, 3, 3118);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'addItemByNameShouldAppearInCart')
+data.setCell(3, 2, 'tests.CartTest')
+data.setCell(3, 3, 3116);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginWithJsonData')
+data.setCell(4, 2, 'tests.LoginTest')
+data.setCell(4, 3, 3052);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginWithJsonData')
+data.setCell(5, 2, 'tests.LoginTest')
+data.setCell(5, 3, 2746);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'loginExpectingFailureShouldReturnErrorMessage')
+data.setCell(6, 2, 'tests.LoginTest')
+data.setCell(6, 3, 2713);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'fluentChainShouldWork')
+data.setCell(7, 2, 'tests.CartTest')
+data.setCell(7, 3, 2521);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'emptyCartShouldReturnZero')
+data.setCell(8, 2, 'tests.CartTest')
+data.setCell(8, 3, 2164);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'removeFirstItemShouldNotThrowAndCanCheckout')
+data.setCell(9, 2, 'tests.CartTest')
+data.setCell(9, 3, 1357);
+window.suiteTableData['Lab9_Bai2_Suite']= { tableData: data, tableDiv: 'times-div-Lab9_Bai2_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <div id="times-div-Lab9_Bai2_Suite">
+              </div> <!-- times-div-Lab9_Bai2_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Lab9-Bai2-Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Lab9_Bai2_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">188 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">188 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">188 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithJsonData(locked_out_user, secret_sauce, fail)</span>
+                <span class="method-start">6921 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithJsonData(standard_user, secret_sauce, success)</span>
+                <span class="method-start">6974 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginSuccessShouldNavigateToInventory</span>
+                <span class="method-start">6983 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithJsonData(standard_user, wrong_password, fail)</span>
+                <span class="method-start">7036 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginExpectingFailureShouldReturnErrorMessage</span>
+                <span class="method-start">7060 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginWithJsonData status=SUCCESS method=LoginTest.loginWithJsonData(java.lang.Strin...)</span>
+                <span class="method-start">9670 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginExpectingFailureShouldReturnErrorMessage status=SUCCESS method=LoginTest.login...)</span>
+                <span class="method-start">9781 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginWithJsonData status=SUCCESS method=LoginTest.loginWithJsonData(java.lang.Strin...)</span>
+                <span class="method-start">10089 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginWithJsonData status=SUCCESS method=LoginTest.loginWithJsonData(java.lang.Strin...)</span>
+                <span class="method-start">10221 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginSuccessShouldNavigateToInventory status=SUCCESS method=LoginTest.loginSuccessS...)</span>
+                <span class="method-start">10231 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.CartTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">10381 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">10381 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">10679 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">10825 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addItemByNameShouldAppearInCart(Sauce Labs Backpack)</span>
+                <span class="method-start">15703 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addItemByNameShouldAppearInCart(Sauce Labs Bike Light)</span>
+                <span class="method-start">15781 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fluentChainShouldWork</span>
+                <span class="method-start">15999 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emptyCartShouldReturnZero</span>
+                <span class="method-start">16060 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=emptyCartShouldReturnZero status=SUCCESS method=CartTest.emptyCartShouldReturnZero(...)</span>
+                <span class="method-start">18225 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=fluentChainShouldWork status=SUCCESS method=CartTest.fluentChainShouldWork()[pri:0,...)</span>
+                <span class="method-start">18522 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=addItemByNameShouldAppearInCart status=SUCCESS method=CartTest.addItemByNameShouldA...)</span>
+                <span class="method-start">18820 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, dev)</span>
+                <span class="method-start">18882 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=addItemByNameShouldAppearInCart status=SUCCESS method=CartTest.addItemByNameShouldA...)</span>
+                <span class="method-start">18899 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">removeFirstItemShouldNotThrowAndCanCheckout</span>
+                <span class="method-start">20626 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=removeFirstItemShouldNotThrowAndCanCheckout status=SUCCESS method=CartTest.removeFi...)</span>
+                <span class="method-start">21985 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
