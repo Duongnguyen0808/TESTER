@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="4.067" tests="4" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1258"/>
+    <property name="java.class.path" value="C:\Users\duong\Hoc\TESTER\Tuan10\bai1\target\test-classes;C:\Users\duong\Hoc\TESTER\Tuan10\bai1\target\classes;C:\Users\duong\.m2\repository\io\rest-assured\rest-assured\5.3.2\rest-assured-5.3.2.jar;C:\Users\duong\.m2\repository\org\apache\groovy\groovy\4.0.11\groovy-4.0.11.jar;C:\Users\duong\.m2\repository\org\apache\groovy\groovy-xml\4.0.11\groovy-xml-4.0.11.jar;C:\Users\duong\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\duong\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\duong\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\duong\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\duong\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\duong\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\duong\.m2\repository\io\rest-assured\json-path\5.3.2\json-path-5.3.2.jar;C:\Users\duong\.m2\repository\org\apache\groovy\groovy-json\4.0.11\groovy-json-4.0.11.jar;C:\Users\duong\.m2\repository\io\rest-assured\rest-assured-common\5.3.2\rest-assured-common-5.3.2.jar;C:\Users\duong\.m2\repository\io\rest-assured\xml-path\5.3.2\xml-path-5.3.2.jar;C:\Users\duong\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\duong\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\duong\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\duong\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\duong\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\duong\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Saigon"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="VN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\duong\AppData\Local\Temp\surefire11979035918430392131\surefirebooter-20260324153837207_3.jar C:\Users\duong\AppData\Local\Temp\surefire11979035918430392131 2026-03-24T15-38-36_957-jvmRun1 surefire-20260324153837207_1tmp surefire_0-20260324153837207_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\duong\Hoc\TESTER\Tuan10\bai1\target\test-classes;C:\Users\duong\Hoc\TESTER\Tuan10\bai1\target\classes;C:\Users\duong\.m2\repository\io\rest-assured\rest-assured\5.3.2\rest-assured-5.3.2.jar;C:\Users\duong\.m2\repository\org\apache\groovy\groovy\4.0.11\groovy-4.0.11.jar;C:\Users\duong\.m2\repository\org\apache\groovy\groovy-xml\4.0.11\groovy-xml-4.0.11.jar;C:\Users\duong\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\duong\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\duong\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\duong\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\duong\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\duong\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\duong\.m2\repository\io\rest-assured\json-path\5.3.2\json-path-5.3.2.jar;C:\Users\duong\.m2\repository\org\apache\groovy\groovy-json\4.0.11\groovy-json-4.0.11.jar;C:\Users\duong\.m2\repository\io\rest-assured\rest-assured-common\5.3.2\rest-assured-common-5.3.2.jar;C:\Users\duong\.m2\repository\io\rest-assured\xml-path\5.3.2\xml-path-5.3.2.jar;C:\Users\duong\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\duong\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\duong\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\duong\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\duong\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\duong\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\duong"/>
+    <property name="user.language" value="vi"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\duong\Hoc\TESTER\Tuan10\bai1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\duong\AppData\Local\Temp\surefire11979035918430392131\surefirebooter-20260324153837207_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="duong"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1258"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\duong\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\duong\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\duong\Hoc\TESTER\Tuan10\bai1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1258"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files\Python312\Scripts\;C:\Program Files\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\mingw64\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\tools\php82;C:\tools\php83;C:\apache-jmeter-5.6.3\bin;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Users\duong\.local\bin;C:\Users\duong\.config\herd-lite\bin;C:\Users\duong\AppData\Local\Microsoft\WindowsApps;C:\Users\duong\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\duong\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Users\duong\AppData\Local\Muse Hub\lib;C:\flutter_windows_3.29.0-stable\flutter\bin;C:\Users\duong\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\duong\AppData\Roaming\Composer\vendor\bin;C:\Users\duong\AppData\Local\Pub\Cache\bin;C:\Program Files\Java\jdk-17\bin;C:\Users\duong\AppData\Local\Programs\Antigravity\bin;C:\Users\duong\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testGetNotFoundUser" classname="ApiGetTest" time="1.8">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "text/html; charset=UTF-8".
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at ApiGetTest.testGetNotFoundUser(ApiGetTest.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://reqres.in/api/users/9999
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 403 Forbidden
+Date: Tue, 24 Mar 2026 08:38:47 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Accept-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cf-Mitigated: challenge
+Critical-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Permissions-Policy: accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()
+Referrer-Policy: same-origin
+Server-Timing: chlray;desc="9e145c941f526e58"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lNYMXTDeQtlag0k6D3Cg38Bm%2Bu0oSfX4XTieTkYVkgAOUxwpYOwTrOCaoX3u71fYb4UViV%2B1PxBIJSvRQ9ihekIwPb8ucA%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Content-Encoding: gzip
+Server: cloudflare
+CF-RAY: 9e145c941f526e58-HKG
+
+<html lang="en-US">
+  <head>
+    <title>Just a moment...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width &lt;= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style>
+    <meta http-equiv="refresh" content="360"/>
+  </head>
+  <body>
+    <div class="main-wrapper" role="main">
+      <div class="main-content">
+        <noscript>
+          <div class="h2">
+            <span id="challenge-error-text">Enable JavaScript and cookies to continue</span>
+          </div>
+        </noscript>
+      </div>
+    </div>
+    <script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9e145c941f526e58',cH: 'JhzT.4No5ULCTkY6.klp1TLLAOLYay5LE3amtudVSzs-1774341527-1.2.1.1-prmpdJQR4O3PLp33T6EqnA8TQQyOVihKGjDilDOkcTmj3a8nInkoau9eqShaexD.',cUPMDTk:"/api/users/9999?__cf_chl_tk=uWEkoMF35CenvMTibQmA1awRoYWK_qDnCqPZOIdbUSc-1774341527-1.0.1.1-5IEkthxfnbPn1xswDTeQMZ9N1Fy.mTG8yc0nqLyaRUI",cFPWv: 'g',cITimeS: '1774341527',cTplC:0,cTplO:0,cTplV:5,cTplB: '0',fa:"/api/users/9999?__cf_chl_f_tk=uWEkoMF35CenvMTibQmA1awRoYWK_qDnCqPZOIdbUSc-1774341527-1.0.1.1-5IEkthxfnbPn1xswDTeQMZ9N1Fy.mTG8yc0nqLyaRUI",md: '6sOLasmoX.dcEeMDaqRc8TZ3oXCzt.mm2QgYWZfnmNY-1774341527-1.2.1.1-4JwrQndDw0N79bDVsJmyKAFOM9F90akCc7_b7sT9oowNETEMsgmbupjN.O7dfTulfW2nojNffYJEzeWVb58O3urj_ArCi1UWVFTW9aOJwLlrfTI7Mlzr.UP8J5LJtnie7TkuVXewKpD_aWnNSu9mugyjsFzMXIoaaC4S6tWoduIsmV6juJG_aG8S.c9TYMlmytQ7EMmefgVNf419rlyglZgOW5Z4hmvA4TUlK_ci4HhCjyBdaQyZvcN94keDKji6yOJwSBdJ.srCk3hpdWoOCHXhunDgS2QXpCS46mPfW88tIp4XmXscSHB__x18NOXWS5ofVZayB9FyBOMak577BEdL2prpvrwrP3E8HPiT7HiQ7xNXdKlgO3hr4ZL5n58SYRpW04oXPh3yo.e32phb2p7IS5af9wN6JC6hYgANL8nRVBXC3k2j3qyMjC4iIacf6UOz8yBntGUnZrYW_FhKI_8wf078ruHVW9T9tSHlvYX3NboGPN_iThTBTHFi.d1QKwKVC1eHJodvLfD7_IA5_htTi0RXUc59GUSJwVBOGpEPBLdzpJJwTMEZyn_pt_4ThiXIq2pe5Fw37g64BCeGao0FXBw2KlVL4LvowTCLPWsORNR0j7vUgaAT79Lg.KcOlsbv5hQ0WycEsxZHOF4X7NTf09wNQuHPuHaJ0YK4XRWuXhFB9YJ5ZoBbvuHiOy3lubttpUmq3FVwM4Ig1M7AZ569GFly_4qD8dTBuwL8yxQnEDhntohTGPgWgDsCUhFVg25umXr_1_TiLHbnmjhbRf0tYmQ2Uv7klekLwKyVthEvROYJx97qMVy9Q4lT7HuSzXBR28hOEd4Bi9rA8SQAyTSi4fVlyRSEMdCmQ75IabjQaf5RXqJ1j9yPMfXgB3fTQHxtl6LNxHBNmaNqDd5M0kVyJCF8cZ1hFlQEk9AVYdU',mdrd: 'kjv.EsMcma_Nnx9m8RTiyVgDj6UdrigJhlAIiGveDlE-1774341527-1.2.1.1-U9FXXbMEiPtHFOlAYrQWFhOrH.zNwkQlW7bQRyVl9IUDuz1P.fNvbFEN8rZGyiaNyYW5wOvHLd9uPE7czsPUmZm52BTC6kWMs.nkKY8kFKRoo5v766K1JCBjX6F93Nz31vp_tr27SOiWQDX_yJ4MIAauiStJ7f0Y32.Q6I262SRF7.UPNGrRatw_IGIluV0nGSSLt6PhVA89x3tC01fQx21F7YD0b6w3CTskxse13iG7C_Xr2EE4kAui9pkERRvpo8M3BD7rKJouK22cKi2dyHceqnjOajXyPqAcKmUHpJuFFeRo3KrOBMx9c28GcyrOZtnGwYklPC3sguWKwHEiAI_HTUWSg1XlfCJOeybB4Lc',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e145c941f526e58';window._cf_chl_opt.cOgUHash = location.hash === '' &amp;&amp; location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' &amp;&amp; location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history &amp;&amp; window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/api/users/9999?__cf_chl_rt_tk=uWEkoMF35CenvMTibQmA1awRoYWK_qDnCqPZOIdbUSc-1774341527-1.0.1.1-5IEkthxfnbPn1xswDTeQMZ9N1Fy.mTG8yc0nqLyaRUI"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script>
+  </body>
+</html>
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testGetSingleUser" classname="ApiGetTest" time="0.203">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "text/html; charset=UTF-8".
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at ApiGetTest.testGetSingleUser(ApiGetTest.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://reqres.in/api/users/3
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 403 Forbidden
+Date: Tue, 24 Mar 2026 08:38:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Accept-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cf-Mitigated: challenge
+Critical-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Permissions-Policy: accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()
+Referrer-Policy: same-origin
+Server-Timing: chlray;desc="9e145c972ce92104"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=CnTRF2jHul1wgrJFCLRSMuPcuLL8bXHognnrKpiV3MzyYvioxRiiIZHVfhGqCj2wm2Z7XBNgFu18R6tcfXbnV%2FCuzkn7dT1x"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Content-Encoding: gzip
+Server: cloudflare
+CF-RAY: 9e145c972ce92104-HKG
+
+<html lang="en-US">
+  <head>
+    <title>Just a moment...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width &lt;= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style>
+    <meta http-equiv="refresh" content="360"/>
+  </head>
+  <body>
+    <div class="main-wrapper" role="main">
+      <div class="main-content">
+        <noscript>
+          <div class="h2">
+            <span id="challenge-error-text">Enable JavaScript and cookies to continue</span>
+          </div>
+        </noscript>
+      </div>
+    </div>
+    <script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9e145c972ce92104',cH: 'PxYNgejajap30G21oeyy89mp_gFgzKV1N4kdABVhB7s-1774341528-1.2.1.1-wyu92szsbYJRVEfvkmetvHH3RoObOa7cDiBqINQKqpMWURDUD56k.1lxPi51ZXls',cUPMDTk:"/api/users/3?__cf_chl_tk=YoIdIxHQ55.YhBYbw5.GppPGemUS0prrtHiWG2E2nzY-1774341528-1.0.1.1-K59p8VeR5Nlphu7hhuw_30ggFXX6HzzREC.zC_n3Yb8",cFPWv: 'g',cITimeS: '1774341528',cTplC:0,cTplO:0,cTplV:5,cTplB: '0',fa:"/api/users/3?__cf_chl_f_tk=YoIdIxHQ55.YhBYbw5.GppPGemUS0prrtHiWG2E2nzY-1774341528-1.0.1.1-K59p8VeR5Nlphu7hhuw_30ggFXX6HzzREC.zC_n3Yb8",md: 'pD6MtOYW8NHcWugzwUdE7f0_3h4iFF_ZPWIjK96rfFU-1774341528-1.2.1.1-fvc0DXod.XJJ2plpXSZWil00Y1bZuyE5mSZE06BpZ7r1BPzmRsMfKSGOJC5_BgCUnHDwSA.EXGAhOqyaEuYatZ6aMRlXQ.Fc7e8r1mlcy_0MVoAXGyTXxyEAi3ftnxNAnvv2GYxfw0MizP310mIXq3wcuOWC4Kx1Mw4COSW6csDKrW0WKl0_lu4Ub_qn.lGMvESnGfJoUep1QC4SllTVYHjoCkeCbWFNmDf59Rf2_lMioQkwBOwdSn_yw4bD2IrCjxaCLzAkEGmJiq0gPI5ejHy87zW.NRwFVagCObd9Ytxm06KRM4olTK5cn5cG3nGbFhiZE7OI9s4dWO_D8d4bv8ehM2qXDYldNAmoRQqxfcwqEyvXvLNKYt5NAkZnYrBxIUtXpIoMDnNLO3_BatQeKn9CKvkyBJBXkOJYqfPIPuL2wdnySKLZE_eGcDNnR0FrO.5dNzYLxpzRCS49fTiDskAhPPSmv8L2RstOKp7kzbV4AD1h14hifDoSGMtoPHXU7nE9uDOpr_COeZICc3h5nmD4wqMEh7HX6H7rUwSyxMiUZI3OyaZrxrxUZlti9HR7EvJFUXodxqTMq8331tjiw.FbxF1dqGWeP2b8Jkb68Wn1UX6FP7DnEjNKS5hzxiTPxdNG.PMlRFmRNPLIKGKW477p4I65gRfRIThnzS.QwVyEkr0Bul8CNmfgbJMeRryqabMpjLOfBas4Om5J.VfDX_7sOSHfFORhDZ3ndaEpR2nc3QGa9.LynlEk17gLijI.wNklV3vSApnKvX5L5rtc1x4E60ZQ20Fc4IagGu81RCUfhphWE7AEcGHlS8_QzvO6mwayLxRZAh2VS3kLLm_0qd7OhxsClIMjl34PgwQAWvfP8VAVhqyo00Rz0KPFTBX8TBieVEoXXSahvkOf5LhWOr7OPJWei9Rdltgw6uYMNzs',mdrd: 's24_8zn83.uy_Pb32X54XIFg9_gmGjf.jCauNSgruU8-1774341528-1.2.1.1-BNLYbcS35SIrsj42JMBRul0MZeRXz.4awfIXUgj2K0CX5VTOSQ._Ucj39OHyuCp3liT4uRkMnHTucqo8kxLbsR72Rz8bCxUPycmOW4tVBQ7bhivFQS1FxuyK3hivNymhyUTQ6OtuGfcWhaB0f7DO4gpKf8UcHoqtEfr6kUohX4QfwPm9qZHEwbEAm1eghiU.DA4yGLfoPYRJk_n5Y1MlJyBidjBKc0O54DV1pR9ijYQb_TAGg94iuu6WLYSzDkwrAU3vYVRmXEIL3s8F07.hNjgThwevn9IrphGd8WnMrutfyAcdF_gMbvRKbr527NBY0iBoE0FGKlO2ZzONy7WL6RRpgJY22Z9lh_Rm2NPkm3s',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e145c972ce92104';window._cf_chl_opt.cOgUHash = location.hash === '' &amp;&amp; location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' &amp;&amp; location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history &amp;&amp; window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/api/users/3?__cf_chl_rt_tk=YoIdIxHQ55.YhBYbw5.GppPGemUS0prrtHiWG2E2nzY-1774341528-1.0.1.1-K59p8VeR5Nlphu7hhuw_30ggFXX6HzzREC.zC_n3Yb8"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script>
+  </body>
+</html>
+]]></system-out>
+  </testcase>
+  <testcase name="testGetUsersPage1" classname="ApiGetTest" time="0.23">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "text/html; charset=UTF-8".
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at ApiGetTest.testGetUsersPage1(ApiGetTest.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://reqres.in/api/users?page=1
+Proxy:			<none>
+Request params:	<none>
+Query params:	page=1
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 403 Forbidden
+Date: Tue, 24 Mar 2026 08:38:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Accept-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cf-Mitigated: challenge
+Critical-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Permissions-Policy: accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()
+Referrer-Policy: same-origin
+Server-Timing: chlray;desc="9e145c988b9208d1"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=sLotNIZRo9yMTRsnP0vkUkqoHoywqDqE73EULsMz7ABKULy9J1ul4KLQl%2Fh2NVRHM1b0LXX4910AF7f1Ccgl3A98FSW36Rw1"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Content-Encoding: gzip
+Server: cloudflare
+CF-RAY: 9e145c988b9208d1-HKG
+
+<html lang="en-US">
+  <head>
+    <title>Just a moment...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width &lt;= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style>
+    <meta http-equiv="refresh" content="360"/>
+  </head>
+  <body>
+    <div class="main-wrapper" role="main">
+      <div class="main-content">
+        <noscript>
+          <div class="h2">
+            <span id="challenge-error-text">Enable JavaScript and cookies to continue</span>
+          </div>
+        </noscript>
+      </div>
+    </div>
+    <script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9e145c988b9208d1',cH: 'WN_nM0dJhVGTf7oww_s09999xa3PBevpr7DZd11wBiE-1774341528-1.2.1.1-NcTacQFmhU43qMT7OldE2yueRO6AR9daU.bSgLNn4FFx2xnWpPBadexegiM6nr9a',cUPMDTk:"/api/users?page=1&amp;__cf_chl_tk=iGVVGmzRJEuiIHyYXosPA4vB4343fB4xXCta3EZUsRY-1774341528-1.0.1.1-QNPYN9hXIA5FpH04UBMBjAjIVdNQr496mIvXPgMF8G8",cFPWv: 'g',cITimeS: '1774341528',cTplC:0,cTplO:0,cTplV:5,cTplB: '0',fa:"/api/users?page=1&amp;__cf_chl_f_tk=iGVVGmzRJEuiIHyYXosPA4vB4343fB4xXCta3EZUsRY-1774341528-1.0.1.1-QNPYN9hXIA5FpH04UBMBjAjIVdNQr496mIvXPgMF8G8",md: 'HHLL5xO5MYhH1Qav5a7Q4mdAOcBzXoqWIwf5nF5qCQM-1774341528-1.2.1.1-3nX6q8OB4wjdOiaPOPDH.sOyqrml9Gh8pC5m6gOknvtnH5opoeND9gUCrrBLL39TR2VAnN_GAjxl7AmkYZt4yI4P28yMkgJX2NQK6S5MNoVEL_cQhrcIZTjVTL421O4I6tM84XJX2rmXDi9H4FbYqh9dss280_mA4xSAwV_3ciTNndBHSBTGT6sExDMq1t6kOOHRUv28PibjNoGW2s.28yjFtwXS6tBXdkJS1v2MEznGyjGemoGhZZ99pcCJpQlqIT83ii7pMxsbe836Q1GJQ2FSavGYcVLEv3IgiM0bM5LCjLQXaHe2nzSvSWrq5htE2D6m3_v.lJ0iygz1fMwfSIoB_oh49puVW9gtDjGSGb5BJPneGpxb7yKKO257x0PRIy8WkTJbLSqDZwa2UwTWqFYahd5KK.ktph3yV2IIy71sjGfiO9IlJ0U_y4KRHxY0bCkPPh0aRjRzB9zw56Sp.y9dr66AM9b8a0v.MoO0_ZunDjZNPfUHehaT8MiKWKv0Q8OLlRL0Lvz2QgBXS5ED3TF0607x7TgvKw8sUkozxLtC9cuavFXrCS5i15UYSLDR6R2CmyzZDk23FUBVYgIJi40SzQgVBVXrk8wtTyjr9mEkmOkCpDY7rT0ApKFkfuitRw35Tp2llsnVeZhncE5uiOoxl8flvkj8q8nTBszJF58fExllxgcNxZfnvnNk7Bevdt8OYC.SS3InE8RpmWIQLiNh8w_jnvxg46bBQwGDXNz5ZuINpcNCyQYY6GHhL26IxfyW_UfWOXTOP_8l9WKNrRqAPeO8MJjFGJlfYFK9YwZxBkq.rmCqcmJI3tdksV3jwTZvozCTpM3uXmO4l2QqEVJWBJJdoHfbWpp.cpCONFBE2NcnoyQrNfModqej51qXAfj4DlT0Y_eVgMBSnQOox.f5d6iNHw4VYxxvkAWsq_c',mdrd: 'K9cdvpPJ.OqRnMD3k2utUIdUa74u.P4IAsHZwNB6Fms-1774341528-1.2.1.1-pxSL78QVkMWlg0TcsXfscT4zY7yBOR2wjzo5GVddNfM6Uf8uzurtNIgCvsiiXCflrzLL1sy99XvdRXG.mfr2mAFb8116d.We8P0JjmlGBDymYOyXjaOSWTEwJNZ0TutZIwPgcFrkBkBg8sJ3J0g5nOKvcbArYqwVk77LPIT.CANZrMLH1BZqFlOEVwoxxfL59v20YPi.he7eaJRvRsHFXdli49LLwkCsw7YdrTB6vFD9QXqQMi4Jhj47cgRi76abujAVAr.4FB9usGSIcVr_XVR2Gx1affRWHsNK7aYdhiE1LE3ah59x9YISEiK4fHLtq6Ew0Z2kBQo0IHTdQAeASB3aiZ_ZB3AGnOf6zuRSOw0',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e145c988b9208d1';window._cf_chl_opt.cOgUHash = location.hash === '' &amp;&amp; location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' &amp;&amp; location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history &amp;&amp; window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/api/users?page=1&amp;__cf_chl_rt_tk=iGVVGmzRJEuiIHyYXosPA4vB4343fB4xXCta3EZUsRY-1774341528-1.0.1.1-QNPYN9hXIA5FpH04UBMBjAjIVdNQr496mIvXPgMF8G8"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script>
+  </body>
+</html>
+]]></system-out>
+  </testcase>
+  <testcase name="testGetUsersPage2" classname="ApiGetTest" time="0.203">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html; charset=UTF-8&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "text/html; charset=UTF-8".
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at ApiGetTest.testGetUsersPage2(ApiGetTest.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	https://reqres.in/api/users?page=2
+Proxy:			<none>
+Request params:	<none>
+Query params:	page=2
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 403 Forbidden
+Date: Tue, 24 Mar 2026 08:38:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Accept-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cf-Mitigated: challenge
+Critical-Ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+Origin-Agent-Cluster: ?1
+Permissions-Policy: accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()
+Referrer-Policy: same-origin
+Server-Timing: chlray;desc="9e145c99d974509e"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=U5BAFAzPen32rPnyeZUGeZm6iCKz%2Blehil87PCw4hmQZB73MVvQg3rndG1YQedv15bm58svg7N2Betfj1oLYQqeghf8YOvFR"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Content-Encoding: gzip
+Server: cloudflare
+CF-RAY: 9e145c99d974509e-HKG
+
+<html lang="en-US">
+  <head>
+    <title>Just a moment...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width &lt;= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style>
+    <meta http-equiv="refresh" content="360"/>
+  </head>
+  <body>
+    <div class="main-wrapper" role="main">
+      <div class="main-content">
+        <noscript>
+          <div class="h2">
+            <span id="challenge-error-text">Enable JavaScript and cookies to continue</span>
+          </div>
+        </noscript>
+      </div>
+    </div>
+    <script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'reqres.in',cType: 'managed',cRay: '9e145c99d974509e',cH: 'Uoc89Kl8OIJwvydnFQ3_fyX0ZHx3cL3nrAc6HEs1pF8-1774341528-1.2.1.1-vSsSpzzxJXjWmnTRFNGsV7.gAVE1EfhfMwT17p1bBgK2AKBvtyVu9hPTdPMcezC.',cUPMDTk:"/api/users?page=2&amp;__cf_chl_tk=eb9mfIXxBYRnxSujWDbi3xyotxZkvS_j74fDfcjHe3A-1774341528-1.0.1.1-wD_JlRubqRaYwdYJlk8KiBuZFSLKyD2c9uvZPpm5A.g",cFPWv: 'g',cITimeS: '1774341528',cTplC:0,cTplO:0,cTplV:5,cTplB: '0',fa:"/api/users?page=2&amp;__cf_chl_f_tk=eb9mfIXxBYRnxSujWDbi3xyotxZkvS_j74fDfcjHe3A-1774341528-1.0.1.1-wD_JlRubqRaYwdYJlk8KiBuZFSLKyD2c9uvZPpm5A.g",md: '4VTJ8BaHCZynv67OKwprvnMjJPoDuClV2P.RQ5aKFTw-1774341528-1.2.1.1-a0WkArAn.cvRteTd6P8wdm1UaOPjkLLYQ57aHFZ51.DGUwmsBZPVIucwpUqWYzWZUQuMSeaP.umOAjcRuRlJeJ_1akPFIyu4VoM_5Zhfxesfc74dkEg6ZLNJRWj8RJKfjApK1CASbZnOBW3jdYx95_sYxRSxtggMitSJDpgfwmrb_rXJxpt6xMgUuqn7tH7MMy5BWyKqfEiexbAwGZAWA1QmWsZYS7XMzMVwo5TPxJHcq0IIwfnWqEsx50kCF1qB0AJvdbNjRnv8LkhyvkBAToGOgMvRq2gKZHEwE8pPBQ58ktu5IfuKj.BpaASehayXWfpaqJHE0PB16agt_fHvW3RKb35sclj1CZPM05Job5GFCdsVw7GHMuzkzslW4jszU7Hlm_12PAkk1EkYLlFpvQB1Y.ogBvFeLdj2oB6nJTve9c5q6oAI6JGfpMrGQesw8Dp383Wvlg3YVnqvVQuCa9Hd_w0ExqQw7xcyXVAlXaDgzMSTfSQt_v.DHCR1DCxOp2Mg12WT7uNrD6lHj1qzCCLUQv_YQpZS9p2bMEQNKuOm1qb56R3XbDWZrIJMA.VALoljDUK58Qku6H4CH2JvMRZYThZ3CaKxfZ5VssYlMUK5jBuCxPMZ7ZvwjP9Pa2j5YU97ZCU_9lNnpC4W8kVS6Yzhdykr8OhwU90ysjyStGY21Kiu1N2X5WzAN2ghmMhlcSUjYnvppRM4U8ZKcQ_EJv3DNqtTlg.pJdbJk83IAOaIfcY95MhetS8Iceo98wn5A_07haNbb_3VBRoo2O70b7RzZCcHi2KV9yaPGTpp5fELe.QYc8ok5dAfRiSJFL6e3rqN7mjKPiCTPoC7zXDRMHGedA9JCzgrpjPLyc9oEoamAWTzeE8bFI4vcLszTILGNgy9wVg0KxUFOSx2O1NzqxnUC9prTX55gEB7mZuK9gE',mdrd: 'ntYwfOCtf109jSTQM_SC9QZzUNiSuC5iLdRO9qcg9uc-1774341528-1.2.1.1-EarGjcU3Fkhhm7nL23Xzjudcryh7mwvUsG4j46geQaIg4h_0GT_R5dp0KDhp7p6MllT.XCg6mO.hgB2rd2MCC627QPeHREJwCIqS6FEVemKDANCkwabjbg0gY8vedNB6Zv37HF_oo.rneq9F2NkwdbjYX25Eh68JoSI6HjHrrehPcR5FNwqEJp4ru0MA6nyA8hOIOFj3u3oetMQG9vHbVKT4otIdYhvj9wF6e0yj10pLuYEtvfrIWGuMEozjsnPwahvtmC1dtKQrwWUchbbcxC8_ziWg9evmJpq0SSv0NHgzeHTVu8WkgcRr0wtoOLmegtZFc_Z8CzGiOO8O5J6gRs8qKSdXD6Euga5ClLeQXGA',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e145c99d974509e';window._cf_chl_opt.cOgUHash = location.hash === '' &amp;&amp; location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' &amp;&amp; location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history &amp;&amp; window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/api/users?page=2&amp;__cf_chl_rt_tk=eb9mfIXxBYRnxSujWDbi3xyotxZkvS_j74fDfcjHe3A-1774341528-1.0.1.1-wD_JlRubqRaYwdYJlk8KiBuZFSLKyD2c9uvZPpm5A.g"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script>
+  </body>
+</html>
+]]></system-out>
+  </testcase>
+</testsuite>
